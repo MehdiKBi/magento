@@ -129,9 +129,35 @@
   font-size: 10px;
   border: none;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-
   width: 50%; /* Could be more or less, depending on screen size */
 }
+
+
+.Register-completed {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); 
+
+}
+ .Register-completed-content {
+   font-family:'Montserrat', sans-serif;
+  background-color: #fefefe;
+  border-radius: 2px;
+  font-size: 10px;
+  border: none;
+  margin: 0% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  width: 100vw;
+  height: 100vh;
+
+}
+
 
 
 
@@ -157,8 +183,17 @@
   border: 1px solid rgb(66, 136, 163);
   padding: 10px;
   font-size: 10px;
-
 }
+.input_style_textarea{
+  width: 80%;
+  height: 50%;
+  border-radius: 5px;
+  border: 1px solid rgb(66, 136, 163);
+  padding: 10px;
+  font-size: 10px;
+  resize: none;
+}
+
 .loggin_weiter{
   background-color: black;
   color: white;
@@ -268,6 +303,23 @@ position: relative;
   background-color: gray;
 }
 
+.loader{
+  margin-top: 10%;
+  width: 100vw;
+  height: 5px;
+  background-color:#FF4A1A;
+  animation-name: loading;
+  animation-duration: 1s;
+  /* animation-direction: reverse; */
+  
+}
+
+@keyframes loading{
+  from{transform: translateX(0);}
+  to{transform: translateX(100vw);}
+
+}
+
     
     </style>
     <link href="blog.css" rel="stylesheet">
@@ -292,23 +344,57 @@ position: relative;
   </header>
 
 
+<!-- Register-completed -->
+<!-- needs to be target from javascript (id) for now display none -->
+  <div id="" class="Register-completed" style="display: none;">
+    <div class="Register-completed-content animate" >
+      <div class="row" style="font-weight: bold;">
+        
+  <div class="col-12" style="display: flex; justify-content: center;">
+    <div style="width: 2000px; height: 600px; background-color: #F7F7F7;">
+      <div style="display: flex; justify-content: center; margin-top: 17%;">
+        <img src="img/endREG.png" alt="">
+      </div>
+      <div class="loader">
+    
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!-- till here (Register-completed) -->
 
 
-<div style="display: flex;justify-self: center;">
+
+
+
+
+
+
+
+  <!-- display should be flex in style belw -->
+<div style="display: flex;justify-self: center;" >
   <div id="id_toggle" class="modal">
     <div class="modal-content animate" >
         <div class="row" style="font-weight: bold;">
+
+      
+
+
           <div class="col-6">
 
-            <div style="display: flex; justify-content: space-around; margin-top: 13%;margin-right: 14%; font-size: 11px;">
+            <!-- display should be flex in style belw -->
+            <div style="display: none; justify-content: space-around; margin-top: 13%;margin-right: 14%; font-size: 11px;" >
               <a class="einloggen_text" href="#"><p  onclick="einloggen()"> 
                 Einloggen</p></a>
                 <a class="Registrien" href="#"><p onclick="reg()">Registrien</p></a>
+               
             </div>
 
 
 
-            <!-- loggin page  -->
+            <!-- loggin form page  -->
                 
                 <form id="einlog" class="formBox" action="/action_page.php"  method="post" style="display: none;">
                 <div style="display: flex ;justify-content: start;margin-top: 6%;margin-left: 11%;" >
@@ -335,7 +421,34 @@ position: relative;
                </div>   
                 </form>
 
-      <!-- till here loggin -->
+<!-- till here loggin -->
+
+
+<!-- bracht du hilfe form page  -->
+                 <form id="einlog" class="formBox" action="/action_page.php"  method="post">
+                  <div style="display: flex ;justify-content: start;margin-top: 6%;margin-left: 11%;" >
+                    <label for="email">Email adaress</label>
+                  </div> 
+                  <div style="display: flex ;justify-content: center;" >
+                    <input class="input_style"   placeholder="email" type="email">
+                  </div>
+                  <div style="display: flex ;justify-content: start;margin-top: 10%;margin-left: 11%;" >
+                    <label for="Nachricht">Nachricht</label>
+                  </div> 
+                  <div style="display: flex ;justify-content: center;">
+                    <textarea name="" class="input_style_textarea" id="" cols="30" rows="10" placeholder="Bitte schreiben Sie hier Ihre Nachricht…"></textarea>
+                  </div>
+                  <div style="display: flex ;justify-content: center;">
+                      <button onclick="submitData()" class="loggin_weiter" style="border-radius: 5px;font-size: 13px;">SENDEN</button>
+                  </div>
+               
+                <div style="display: flex ;justify-content: center;">
+                      <a class style="text-decoration:underline;margin: 5px;" href="#">Zurück Zum Login</a>
+                 </div>   
+                  </form>
+  
+<!-- till here( bracht du hilfe from page) -->
+  
 
 
 
@@ -391,9 +504,9 @@ position: relative;
 
 
 
-<!-- second page of the regestration form  -->
+<!-- second page of the regestration form 2  -->
 
-                <form id="regis" class="secondPage-regForm" action="/action_page.php"  method="post">
+                <form id="regis" class="secondPage-regForm" action="/action_page.php"  method="post" style="display: none;">
                   <div style="display: flex;justify-content: space-between;">
                     <div style="margin-left: 20%;">
                       <input  type="radio" id="female" name="gender" value="female">
@@ -462,7 +575,7 @@ position: relative;
                   <div class="bottom-form" style="margin-left: 1%;"></div>
               </div>
                 </form>  
- <!-- till  here(form) -->
+ <!-- till  here(form 2) -->
 
 
 
@@ -504,6 +617,40 @@ position: relative;
 
 <!-- till here (Registreirung-info) -->
 
+<!-- INFO Registreirung-info on the right part 2 -->
+<div class="col-6" class="Registreirung-info" style="background-color: #F7F7F7;display: none;">
+  <h6  style="position: absolute;margin-left:10%;margin-top: 5%;font-size: 200%;">Willkommen zurück!</h6>
+     <div  style="position: absolute;margin-left:5%;margin-top: 10%;width: 50px;height: 50px;
+          background-color: #ff745c5d; border-radius: 50%;
+     ">
+     </div>
+          <div style="margin-top: 26%; margin-left: 15%;" >
+               <h4 style="font-size: 120%;">Registreirung</h4>
+               <h4 style="font-size: 120%;margin-top: 20%;">Datenschutz:</h4>
+                   <p style="margin-top: 3%;">Die angegebenen Daten werden ausschließlich 
+                    zur Darstellung der Seite und deren Funktionalitäten verwendet. Die Daten 
+                    unterliegen den Datenschutzbestimmungen und sind für Dritte nicht zugänglich.</p>
+               <h4 style="font-size: 120%;margin-top: 10%;">Geburstdatum:</h4>
+                   <p>Die optionalen Felder Geburtsdatum  werden intern für die gezielte Suche nach 
+                     neuen Anbietern und Angeboten sowie zur Optimierung von Suchergebnissen verwendet.</p>
+      </div>
+      <div style="display:flex;">
+        <div style="margin-right: 30%; display: inline;">
+          <img src="img/arrow_back_black_24dp.png" alt="" >
+          <a href="#">
+            <p>
+            zurück zum ersten Schritt</p>
+          </a>
+        </div>
+        <div style="display: inline; margin-left: 30px;">
+          <img src="img/Icon feather-help-circle.png" alt="" ><a href="#" style="margin-left:4%;"><p>Brauchts du hilfe?</p></a> 
+
+        </div>
+      </div>
+</div>
+
+<!-- till here (Registreirung-info 2) -->
+
 
 
 
@@ -533,7 +680,7 @@ position: relative;
 
 
 <!-- INFO password-info -->
-         <div class="col-6" class="Password-info" style="background-color: #F7F7F7;">
+         <div class="col-6" class="Password-info" style="background-color: #F7F7F7; display: none;">
           <h6  style="position: absolute;margin-left:10%;margin-top: 5%;font-size: 200%;">Willkommen zurück!</h6>
              <div  style="position: absolute;margin-left:5%;margin-top: 10%;width: 50px;height: 50px;
                   background-color: #ff745c5d; border-radius: 50%;
@@ -551,6 +698,35 @@ position: relative;
               </div>
        </div>
 <!-- till here (password) -->
+
+
+
+<!-- INFO bracht du hilfe?-info -->
+<div class="col-6" class="Password-info" style="background-color: #F7F7F7;">
+  <h6  style="position: absolute;margin-left:5%;margin-top: 5%;font-size: 150%; color: rgb(251, 64, 31);">Finde Antworten nach Themen</h6>
+     <div  style="position: absolute;margin-left:2%;margin-top: 2%;width: 50px;height: 50px;
+          background-color: #ff745c5d; border-radius: 50%;
+     ">
+     </div>
+          <div style="margin-top: 26%; margin-left: 15%;" >
+               <h4 style="font-size: 120%;">Rückgaberecht</h4>
+               <a href="" style="text-decoration:underline;" >Wiederrufs- und Rücktrittsrecht</a><br>
+               <a href="" style="text-decoration:underline;" >Ausschluss des Rücktrittsrechts</a><br>
+               <a href="" style="text-decoration:underline;" >Verlust des Rücktrittsrechts</a><br>
+               <a href="" style="text-decoration:underline;" >Widerrufsfolgen</a><br>
+              <h3 style="font-size: 150%;margin-top: 4%;">Zahlungsoptionen</h3>
+              <p>Folgende Zahlungsoptionen stehen dir zur Verfügung:</p>
+              <p>American <br> Express<br>  Diners Club <br> MasterCard <br>
+                PayPal <br> paysafecash <br> Sofortüberweisung<br>  Visa</p>
+           
+                <p style="color: tomato; font-weight: 900;">Keine der Fragen oben trifft auf mich zu, wer kann mir helfen?</p>
+
+                  <p>Bitte schicken eine E-Mail an <a href="" style="color: #F6552B;">service@corplife.at</a>   & erkläre uns 
+                    wie wir dich unterstützen können ode einfach schreiben sie ihre
+                    nachricht.</p>
+            </div>
+        </div>
+<!-- till here (bracht du hilfe?) -->
 
 
 
