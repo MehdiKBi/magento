@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.80.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <title>phtml</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/blog/">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+      body{
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .btn_log {
+        background-color: #FF4A1A;
+        border-radius: 3px;
+        border: none;
+        width: 200px;
+        color: white;
+      }
+      a{
+        text-decoration: none;
+        color: black;
+      }
+      #angebot_footer{
+        width: 100vmax;
+        height: 25vh;
+        background-image: url("img/Rectangle\ 26825.png");
+      }
+      .nav-scroller{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      }
+
+      .dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* slider animation */
+.slider {
+  /* -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s; */
+  animation-name: slider;
+  animation-duration: 5.5s;
+  position: relative;
+  top: auto;
+  animation-fill-mode: forwards;
+  /* animation-iteration-count: infinite;  */
+   /* animation-direction: forward; */
+   /* -webkit-animation-direction: alternate; */
+}
+
+
+@keyframes slider {
+  from {opacity: 0.20;} 
+  to {opacity: 1.1;}
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.footer_slider{
+  position: relative;
+  animation-name: swipe;
+  animation-duration: 2.1s;
+  /* animation-fill-mode:backwards; */
+  animation-direction: alternate;
+  width: fit-content;
+  height: 300px;
+
+
+}
+@media(max-width: 400px){
+        
+      }
+
+
+@keyframes swipe{
+  0%  { left: 0; }
+  10%  { left: 100; }
+  20%  { left: 220; }
+  30%  { left: 300; }
+  40%  { left: 400; }
+  100%{left:100px }
+
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 60px;
+}
+ .modal-content {
+   font-family:'Montserrat', sans-serif;
+  background-color: #fefefe;
+  border-radius: 2px;
+  font-size: 10px;
+  border: none;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+.animate {
+  -webkit-animation: animatezoom 0.2s;
+  animation: animatezoom 0.2s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+.input_style{
+  width: 80%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid rgb(66, 136, 163);
+  padding: 10px;
+  font-size: 10px;
+
+}
+.loggin_weiter{
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  width: 80%;
+  height:40px;
+  margin-top: 10%;
+}
+
+.einloggen_text{
+  border-bottom: 2px solid #ff4c1a00 ;
+    width: 20px;
+    height: 5;
+  color: #bbb;
+  transition: border-bottom .30s;
+  
+}
+.einloggen_text:hover{
+  border-bottom: 2px solid #FF4A1A ;
+  border-radius: 1px;
+  color: black;
+  transform: scaleZ(1.1);
+  font-weight: bold;
+}
+.Registrien{
+  border-bottom: 2px solid #ff4c1a00 ;
+    width: 20px;
+    height: 5;
+  color: #bbb;
+  transition: border-bottom .30s;
+}
+.Registrien:hover{
+  border-bottom: 2px solid #FF4A1A ;
+  border-radius: 1px;
+  color: black;
+
+}
+
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      /* .slider-fram{
+        overflow: hidden;
+        height: 800px;
+        width: 2200px;
+      }
+
+      @-webkit-keyframes slider_animation {
+     0%   {left: 0px;}
+     10%   {left: 0px;}
+     20%   {left: 1200px;}
+     30%   {left: 1200px;}
+     40%   {left: 2400px;}
+     50%   {left: 2400px;}
+     60%   {left: 1200px;}
+     70%   {left: 1200px;}
+     80%   {left: 0px;}
+     90%   {left: 0px;}
+     100%   {left: 120px;}
+    }
+
+    .slide-img{
+width: fit-content;
+height: 100px;
+margin: 0 0 0 -2400px;
+position: relative;
+-webkit-animation-name:slider_animation;
+-webkit-animation-duration:10s ;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-direction: alternate;
+-webkit-animation-play-state: running;
+    }
+
+   .img-container{
+     height: 8000px;
+     width: 200px;
+      position: relative;
+      float: left;
+    } */
+    
+
+.eye-icon{
+  cursor: pointer;
+}
+
+.formBox{
+  display: initial;
+}
+.regBox{
+  display: none;
+}
+
+    
+    </style>
+    <link href="blog.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <div  style="background-color: white;">
+<div class="">
+  <header class="py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <a class="link-secondary" href="#"><img style="margin: 50px 0px 0px 200px;" src="img/Corplife_benefit.svg" alt=""></a>
+      </div>
+      <div class="col-4 text-center">
+        <a class="blog-header-logo text-dark" href="#"></a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="btn btn-sm " href="#">
+          <button class="btn_log p-1" onclick="document.getElementById('id_toggle').style.display='block'" style="margin: 50px 200px 0px 0px;font-size: 12px;">EINLOGGEN</button>
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+
+
+<div style="display: flex;justify-self: center;">
+  <div id="id_toggle" class="modal">
+    <div class="modal-content animate" >
+        <div class="row" style="font-weight: bold;">
+          <div class="col-6">
+
+            <div style="display: flex; justify-content: space-around; margin-top: 13%;margin-right: 14%; font-size: 11px;">
+              <a class="einloggen_text" href="#"><p  onclick="einloggen()"> 
+                Einloggen</p></a>
+                <a class="Registrien" href="#"><p onclick="reg()">Registrien</p></a>
+            </div>
+                
+                <form id="einlog" class="formBox" action="/action_page.php"  method="post">
+
+                <div style="display: flex ;justify-content: start;margin-top: 6%;margin-left: 11%;" >
+                  <label for="email">Email adaress</label>
+                </div> 
+                <div style="display: flex ;justify-content: center;" >
+                  <input class="input_style"   placeholder="email" type="email">
+                </div>
+                <div style="display: flex ;justify-content: start;margin-top: 10%;margin-left: 11%;" >
+                  <label for="password">password</label>
+                </div> 
+                <div style="display: flex ;justify-content: center;">
+                  <input class="input_style" placeholder="password" id="" type="password">
+                </div>
+                <img onclick="" class="eye-icon" src="img/eye-icon.png" style="position: absolute;margin-left: 40%; margin-bottom: 100px; margin-top: -27px;" alt="">
+                <div style="display: flex ;justify-content: center;">
+                    <button onclick="submitData()" class="loggin_weiter" style="border-radius: 5px;font-size: 13px;">Weiter</button>
+                </div>
+                <div style="display: flex ;justify-content: center;margin-top: 4%;">
+                  <p>Haben sie keine konto?</p><a style="color: #FF4A1A;" href="">hier klicken</a>
+              </div>
+              <div style="display: flex ;justify-content: center;">
+                    <a class style="text-decoration:underline;margin: 5px;" href="#">Password Vergessen?</a>
+               </div>   
+
+                </form>
+                <form id="regis" class="regBox" action="/action_page.php"  method="post">
+                  <div style="display: flex ;justify-content: start;margin-top: 5%;margin-left: 11%;" >
+                    <label for="email">Email adaress</label>
+                  </div> 
+                  <div style="display: flex ;justify-content: center;" >
+                    <input class="input_style"   placeholder="email" type="email">
+                  </div>
+                  <!-- <div style="display: flex ;justify-content: center;margin-top: 6%;" >
+                    <input class="input_style mt-1"   placeholder="Secure code eingeben" type="code">
+                  </div> -->
+                  <div style="display: flex ;justify-content: start;margin-top: 10%;margin-left: 11%;" >
+                    <label for="password">password</label>
+                  </div> 
+                  <div style="display: flex ;justify-content: center;">
+                    <input class="input_style" placeholder="password" id="" type="password">
+                  </div>
+                  <img onclick="" class="eye-icon" src="img/eye-icon.png" style="position: absolute;margin-left: 40%; margin-bottom: 100px; margin-top: -27px;" alt="">
+                  <div style="display: flex ;justify-content: start;margin-top: 5%;margin-left: 11%;" >
+                    <label for="password">Password wiederholung</label>
+                  </div> 
+                  <div style="display: flex ;justify-content: center;">
+                    <input class="input_style" placeholder="password" id="" type="password">
+                  </div>
+                  <img onclick="" class="eye-icon" src="img/eye-icon.png" style="position: absolute;margin-left: 40%; margin-bottom: 100px; margin-top: -27px;" alt="">
+                  <div style="display: flex ;justify-content: center;">
+                      <button onclick="submitData()" class="loggin_weiter" style="border-radius: 5px;font-size: 13px;margin-top: 3%;">Weiter</button>
+                  </div>
+                  <div style="display: flex ;justify-content: center;margin-top: 4%;">
+                    <p>Hast du schon einen Konto?</p><a style="color: #FF4A1A;" href="">hier klicken</a>
+                </div>
+                </form>
+          </div>
+          <div class="col-6">
+            <img style="position: absolute;margin-left:12%;margin-top: 5%;" src="img/Willkommen zurück!.png" alt="">
+            <div>
+              <img style="width: 100%; height: 100%;" src="img/rightside_image_loggin.png" alt="loggin image">
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  <div class="nav-scroller py-1 mb-2 mt-2" style="background-color: white;">
+    <nav class="nav d-flex text-dark justify-content-between" style="font-size: 10px;color: black;text-decoration:none;">
+      <a class="p-2" href="#" style="margin-left: 200px;">KULINARIK</a>
+      <a class="p-2" href="#">FASHION & LIFESTYLE</a>
+      <a class="p-2" href="#">WEllNESS & BEAUTY</a>
+      <a class="p-2" href="#">SPORT & GESUNDEHIT</a>
+      <a class="p-2" href="#">FREIZEIT</a>
+      <a class="p-2" href="#">KINDER</a>
+      <a class="p-2" href="#">TRAVEL</a>
+      <a class="p-2" href="#" style="margin-right: 200px;">HAUSHALT & TECHNIK</a>
+    </nav>
+  </div>
+</div>
+</div>
+
+<main class="container">
+  <div class="p-4 p-md-5 mb-4 rounded bg-white">
+    <!-- <div class="row px-0">
+    <img class="col-6" src="img/Path 34864.svg" alt="Path">
+      <div class="col-6">
+        <h3>Was wünschen sich Ihre <br>
+           MitarbeiterInnen?</h3>
+        <p class="mt-5">Corplife Benefits bietet exklusive Rabatte im Bereich Freizeit, 
+          Sport, Reisen und mehr für ALLE MitarbeiterInnen
+           in Ihrem Unternehmen.</p>
+           <button class="btn_log p-1" style="font-size: 12px;">ZUM ANGEBOTE</button>
+      </div> -->
+      <div class="slideshow-container">
+
+        <div class="mySlides slider ">
+          <img src="img/Scroll Group 8.png" style="width:100%">
+        </div>
+        <div class="mySlides slider">
+          <img src="img/Scroll Group 9.png" style="width:100%">
+        </div>
+        <div class="mySlides slider">
+          <img src="img/Scroll Group 10.png" style="width:100%">
+        </div>
+        <div class="mySlides slider">
+          <img src="img/Scroll Group 11.png" style="width:100%">
+        </div>
+      <div style="text-align:center" class="mt-4">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+      </div>
+    </div>
+  </div>
+  <div style="display: flex; justify-content: center;">
+    <img src="img/Group 35536.png" style="position:fixed; width: 100vw;margin-top: 220px;" alt="ads"> 
+  </div>
+  
+  <div class="row">
+    <img src="img/Group 36072.png" alt="waterfall images">
+  </div>
+</main>
+<div class="">
+  <div class="row px-0" style="display: flex; justify-content: center;">
+    <!-- <div id="angebot_footer">
+        <h3 class="text-white m-5" style="font-weight: bold;font-weight: bolder;">Sneakers Never Run Out Of Style 
+          Erhalten Sie 50% Rabatt auf das gesamte Sortiment</h3>
+    <button style="background-color:rgba(255, 255, 255, 0);border:1px solid white;border-radius: 5px;color: white; float: right;margin-right: 20%;" >Zum Angebot</button>
+    </div> -->
+    <div class="">
+      <img class="footer_slider" src="img/RR.png" style="width:100%">
+      <!-- <div class="slider-fram">
+        <div class="slide-img">
+            <div class="img-container">
+              <img src="img/b1.png" alt="">
+            </div>
+            <div class="img-container">
+              <img src="img/b2.png" alt="">
+            </div>
+            <div class="img-container">
+              <img src="img/b3.png" alt="">
+            </div>
+            <div class="img-container">
+              <img src="img/b4.png" alt="">
+            </div>
+        </div>
+      </div> -->
+    </div>
+    <div class="slideshow-container">
+    <div style="text-align:center" class="mt-4">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    <div class="slideshow-container">
+      <div style="text-align:center" class="mt-4">
+        <button style="background-color:rgba(255, 255, 255, 0);border:2px solid #F6552B;
+        border-radius: 5px;color: #F6552B; width: 400px;margin: 40px;font-family: Verdana, Geneva, Tahoma, sans-serif;height: 50px;" >
+        Entdecke jetzt alle andere produkt</button>
+      </div>
+   </div>
+  </div>
+</div>
+
+
+
+<footer class=" py-5" style="background-color: #130F30;font-size: 10px;">
+  <h3 class="text-center" style="color: #FF745C; font-weight: bold;">Holen Sie sich die meisten 
+    Vorteile von World Top Brands:</h3>
+  <div class="row mt-5">
+    <div class="col-6 col-md">
+      <ul class="list-unstyled text-small" style="text-transform:uppercase;">
+        <li><a class="link-secondary" href="#">Almdudler</a></li>
+        <li><a class="link-secondary" href="#">almstolz</a></li>
+        <li><a class="link-secondary" href="#">Alpenschlaf</a></li>
+        <li><a class="link-secondary" href="#">Augarten</a></li>
+        <li><a class="link-secondary text-white" href="#" >Allpine</a></li>
+        <li><a class="link-secondary" href="#">Almenlandkräute <br>
+          MozartkugelAutfi <br>
+          tterei</a></li>
+        <li><a class="link-secondary" href="#">ALKORIN</a></li>
+        <li><a class="link-secondary" href="#" >Arthrobene</a></li>
+        <li><a class="link-secondary" href="#">Alpin Loacker</a></li>
+        <li><a class="link-secondary" href="#">ALPINE organics</a></li>
+        <li><a class="link-secondary" href="#">AUELA</a></li>
+        <li><a class="link-secondary" href="#">Aston Martin Red Bull Racing</a></li>
+        <li><a class="link-secondary" href="#">Astwerk</a></li>
+        <li><a class="link-secondary" href="#">Austroducks</a></li>
+        <li><a class="link-secondary" href="#">Alpengummi</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md ">
+      <ul class="list-unstyled text-small" style="text-transform:uppercase">
+        <li><a class="link-secondary" href="#">Dachstein</a></li>
+        <li><a class="link-secondary text-white" href="#">Dyson</a></li>
+        <li><a class="link-secondary" href="#">Das Goldene </a></li>
+        <li><a class="link-secondary" href="#">Wiener Herz®</a></li>
+        <li><a class="link-secondary" href="#" >Demmers Teehaus</a></li>
+        <li><a class="link-secondary" href="#">Farthofer</a></li>
+        <li><a class="link-secondary" href="#" >DIANA with</a></li>
+        <li><a class="link-secondary" href="#">Menthol</a></li>
+        <li><a class="link-secondary text-white" href="#">Die Seiferei</a></li>
+        <li><a class="link-secondary" href="#">Dog’s Love</a></li>
+        <li><a class="link-secondary" href="#">Dreh und Trink</a></li>
+        <li><a class="link-secondary" href="#">Dreh und Trink</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md ">
+      <ul class="list-unstyled text-small" style="text-transform:uppercase;">
+        <li><a class="link-secondary" href="#">Goldkehlchen</a></li>
+        <li><a class="link-secondary" href="#">Gscheade Leibal</a></li>
+        <li><a class="link-secondary" href="#">GailtalBauer</a></li>
+        <li><a class="link-secondary" href="#">Großwalsertaler Bergkäse</a></li>
+        <li><a class="link-secondary text-white" href="#">Gölles Manufaktur</a></li>
+      
+        <li><a class="link-secondary" href="#">gernekoch</a></li>
+        <li><a class="link-secondary text-white" href="#">Gusta Garden</a></li>
+        <li><a class="link-secondary" href="#">Gin1404</a></li>
+        <li><a class="link-secondary" href="#">G´spritzter</a></li>
+        <li><a class="link-secondary" href="#">GARONIA</a></li>
+        <li><a class="link-secondary text-white">GenussBauernhof Hillebrand</a></li>
+        <li><a class="link-secondary" href="#" >Gretel</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md ">
+      <ul class="list-unstyled text-small" style="text-transform:uppercase;">
+        <li><a class="link-secondary" href="#">Goldkehlchen</a></li>
+        <li><a class="link-secondary text-white" href="#">peek & cloppenburg</a></li>
+        <li><a class="link-secondary" href="#">PONA</a></li>
+        <li><a class="link-secondary" href="#">Pabuku</a></li>
+        <li><a class="link-secondary" href="#">Pumuckl Kizzl </a></li>
+      
+        <li><a class="link-secondary">PUR
+        </a></li>
+        <li><a class="link-secondary" href="#">Polz Winery</a></li>
+        <li><a class="link-secondary" href="#">Poje Tracht</a></li>
+        <li><a class="link-secondary" href="#">POM-BÄR</a></li>
+        <li><a class="link-secondary" href="#">PRIMABENE</a></li>
+        <li><a class="link-secondary text-white" href="#">PLANET PURE</a></li>
+        <li><a class="link-secondary" href="#">Planteen</a></li>
+        <li><a class="link-secondary" href="#">Pure Green</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md ">
+      <ul class="list-unstyled text-small" style="text-transform:uppercase;">
+        <li><a class="link-secondary" href="#">RIESS</a></li>
+        <li><a class="link-secondary" href="#">RoughCut</a></li>
+        <li><a class="link-secondary" href="#">Röck</a></li>
+        <li><a class="link-secondary" href="#">Naturprodukte</a></li>
+        <li><a class="link-secondary" href="#">Ritonka </a></li>
+      
+        <li><a class="link-secondary">ROST
+        </a></li>
+        <li><a class="link-secondary" href="#">Roksox</a></li>
+        <li><a class="link-secondary" href="#">Rauers Ernte</a></li>
+        <li><a class="link-secondary" href="#">RICK GIN</a></li>
+        <li><a class="link-secondary" href="#">PRIMABENE</a></li>
+        <li><a class="link-secondary text-white" href="#">Red Bull KTM </a></li>
+        <li><a class="link-secondary" href="#">Racing Team</a></li>
+        <li><a class="link-secondary" href="#">Radatz</a></li>
+        <li><a class="link-secondary" href="#">ReBlock</a></li>
+
+      </ul>
+    </div>
+    <div class="col-6 col-md ">
+      <ul class="list-unstyled text-small" style="text-transform:uppercase">
+        <li><a class="link-secondary" href="#">Scheer</a></li>
+        <li><a class="link-secondary" href="#">Sorbet Bracelets</a></li>
+        <li><a class="link-secondary" href="#">Stutenmilch</a></li>
+        <li><a class="link-secondary" href="#">Töchterlehof</a></li>
+        <li><a class="link-secondary text-white" href="#">Steiner 1888</a></li>
+        <li><a class="link-secondary" href="#">STYX</a></li>
+        <li><a class="link-secondary" href="#">Steirerkraft</a></li>
+        <li><a class="link-secondary" href="#">STIN</a></li>
+        <li><a class="link-secondary" href="#">Samen Maier
+        </a></li>
+        <li><a class="link-secondary" href="#">Stadtbiene
+        </a></li>
+        <li><a class="link-secondary" href="#">STAUD‘S</a></li>
+ 
+      </ul>
+    </div>
+    <div class="col-6 col-md ">
+      <ul class="list-unstyled text-small" style="text-transform:uppercase">
+        <li><a class="link-secondary" href="#">PUR</a></li>
+        <li><a class="link-secondary" href="#">Polz Winery</a></li>
+        <li><a class="link-secondary" href="#">Poje Tracht</a></li>
+        <li><a class="link-secondary" href="#">POM-BÄR</a></li>
+        <li><a class="link-secondary text-white" href="#">PRIMABENE</a></li>
+        <li><a class="link-secondary" href="#">PLANET PURE </a></li>
+        <li><a class="link-secondary" href="#">Planteen</a></li>
+        <li><a class="link-secondary" href="#">Pure Green
+        </a></li>
+        <li><a class="link-secondary" href="#">purgaty</a></li>
+        <li><a class="link-secondary" href="#">Peeroton</a></li>
+        <li><a class="link-secondary" href="#">Planty Rings</a></li>
+        <li><a class="link-secondary" href="#">PURE SKIN FOOD</a></li>
+        <li><a class="link-secondary" href="#">Piatnik</a></li>
+        <li><a class="link-secondary" href="#">PONA</a></li>
+        <li><a class="link-secondary" href="#">Pabuku</a></li>
+
+      </ul>
+    </div>
+</footer>
+
+
+
+
+
+
+<footer class=" py-5" style="background-color: #130F30;font-size: 10px; color: white;border-top: 0.20px solid rgba(255, 255, 255, 0.246);">
+  <div class="row mt-5">
+
+        <a class="link-secondary" href="#"><img style="margin: 50px 0px 0px 200px;" src="img/assets-logos-CL_logo_color_positive.png" alt=""></a>
+    <div class="col-6 col-md ">
+   
+    </div>
+    <div class="col-6 col-md ">
+      <ul class="list-unstyled text-small" style="text-transform:uppercase;">
+       
+        <li><a class="link-secondary" style="color: #FF745C;" href="#">Registiere Dich jetzt für den newsletter</a></li>
+        <li><a class="link-secondary" style="color:white;" href="#">Feedback zu unserer seite</a></li>
+
+      </ul>
+    </div>
+    <div class="col-6 col-md ">
+      <ul class="list-unstyled text-small" style="text-transform:uppercase">
+
+
+        <li><a class="link-secondary" href="#">Brauchst du hilfe?</a></li>
+        <li><a class="link-secondary" href="#">FAQ</a></li>
+        <li><a class="link-secondary" href="#">Zahlungsoptionen</a></li>
+        <li><a class="link-secondary" href="#">rückgaberecht</a></li>
+        <li><a class="link-secondary" href="#">kontaktiere uns</a></li>
+
+      
+      </ul>
+    </div>
+    <div class="col-6 col-md ">
+      <ul class="list-unstyled text-small" style="text-transform:uppercase">
+        <li><a class="link-secondary" href="#">über Corplife benefit</a></li>
+        <li><a class="link-secondary" href="#">über Corplife</a></li>
+        <li><a class="link-secondary" href="#">Presse</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md ">
+        <img style="margin-right: 100px;" src="img/Group 10089.png" alt="app">
+    </div>
+  </div>
+</footer>
+<!-- <div class="row" style="background-color:#130F30;border-top: 0.20px solid rgba(255, 255, 255, 0.116);">
+  <p class="col-9" style="color:#5f5983;font-size: 15px;">Corplife GmbH 2021</p>
+  <p class="col-1" style="color:#5f5983;font-size: 15px;">Datenschutz</p>
+  <p class="col-1" style="color:#5f5983;font-size: 15px;">Impressum</p>
+  <p class="col-1" style="color:#5f5983;font-size: 15px;">AGB</p>
+</div>
+</div>
+<div class="row" style="background-color:#130F30;border-top: 0.20px solid rgba(255, 255, 255, 0.116);">
+  <p class="col-9">__</p>
+  <p class="col-1">__</p>
+  <p class="col-1">__</p>
+  <p class="col-1">__</p>
+</div>
+</div> -->
+
+
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script>
+    var slideIndex = 1;
+  showSlides(slideIndex);
+
+
+
+  function currentSlide(n) {
+  showSlides(slideIndex = n)
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+
+
+var modal = document.getElementById('id_toggle');
+
+
+//for the window click
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+
+
+// var formBoxi = document.querySelector("formBox")
+
+// formBoxi.addEventListener(click,()=>{
+
+// })
+
+const einloggen=()=>{
+
+    document.getElementById('einlog').style.display='initial'
+  document.getElementById('regis').style.display='none'
+
+ 
+}
+const reg=()=>{
+  document.getElementById('einlog').style.display='none'
+  document.getElementById('regis').style.display='initial'
+}
+
+
+
+
+
+  </script>
+</html>
