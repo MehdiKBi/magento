@@ -305,8 +305,12 @@ position: relative;
                 Einloggen</p></a>
                 <a class="Registrien" href="#"><p onclick="reg()">Registrien</p></a>
             </div>
+
+
+
+            <!-- loggin page  -->
                 
-                <form id="einlog" class="formBox" action="/action_page.php"  method="post">
+                <form id="einlog" class="formBox" action="/action_page.php"  method="post" style="display: none;">
                 <div style="display: flex ;justify-content: start;margin-top: 6%;margin-left: 11%;" >
                   <label for="email">Email adaress</label>
                 </div> 
@@ -329,18 +333,34 @@ position: relative;
               <div style="display: flex ;justify-content: center;">
                     <a class style="text-decoration:underline;margin: 5px;" href="#">Password Vergessen?</a>
                </div>   
-
                 </form>
-                <form id="regis" class="regBox" action="/action_page.php"  method="post">
+
+      <!-- till here loggin -->
+
+
+
+<!-- first page of the regestration form  -->
+
+                <form id="regis" class="regBox" action="/action_page.php"  method="post" style="display: none;">
                   <div style="display: flex ;justify-content: start;margin-top: 5%;margin-left: 11%;" >
                     <label for="email">Email adaress</label>
                   </div> 
                   <div style="display: flex ;justify-content: center;" >
                     <input class="input_style"   placeholder="email" type="email">
                   </div>
-                  <!-- <div style="display: flex ;justify-content: center;margin-top: 6%;" >
-                    <input class="input_style mt-1"   placeholder="Secure code eingeben" type="code">
-                  </div> -->
+
+
+<!-- if secure code needed -->
+                    <div id="code-secure-box" style="display: none;">
+                      <div style="display: flex ;justify-content: start;margin-top: 10%;margin-left: 11%;" >
+                        <label for="code">Secure Code</label>
+                      </div> 
+                      <div style="display: flex ;justify-content: center;" >
+                        <input class="input_style mt-1"   placeholder="Secure code eingeben" type="code">
+                      </div>
+                    </div>
+<!-- till here (secure code)  -->
+
                   <div style="display: flex ;justify-content: start;margin-top: 10%;margin-left: 11%;" >
                     <label for="password">password</label>
                   </div> 
@@ -365,7 +385,90 @@ position: relative;
                   <div class="bottom-form"></div>
                   <div class="bottom-form-second" style="margin-left: 1%;"></div>
               </div>
-                </form>
+                </form>  
+    <!-- till  here(form) -->
+
+
+
+
+<!-- second page of the regestration form  -->
+
+                <form id="regis" class="secondPage-regForm" action="/action_page.php"  method="post">
+                  <div style="display: flex;justify-content: space-between;">
+                    <div style="margin-left: 20%;">
+                      <input  type="radio" id="female" name="gender" value="female">
+                      <label for="female">Frau</label>
+                    </div>
+                    <div>
+                      <input type="radio" id="male" name="gender" value="male">
+                      <label for="male">Herr</label>
+                    </div>
+                    <div style="margin-right: 20%;">
+                      <input type="radio" id="other" name="gender" value="other">
+                      <label for="other">Andere</label>
+                    </div>
+                  </div>
+
+                  <div style="display: flex ;justify-content: start;margin-top: 2%;margin-left: 11%;" >
+                    <label for="name">Vorname*</label> 
+                  </div> 
+                  <div style="display: flex ;justify-content: center;" >
+                    <input class="input_style"   placeholder="Vorname" type="text">
+                  </div>
+
+                    <div id="code-secure-box">
+                      <div style="display: flex ;justify-content: start;margin-top: 4%;margin-left: 11%;" >
+                        <label for="fname">Nachname*</label>
+                      </div> 
+                      <div style="display: flex ;justify-content: center;" >
+                        <input class="input_style mt-1"   placeholder="Nachname" type="text">
+                      </div>
+                    </div>
+                 
+
+                  <div style="display: flex ;justify-content: start;margin-top: 4%;margin-left: 11%;" >
+                    <label for="birthday">Geburstdatum</label>
+                  </div> 
+                  <div style="display: flex ;justify-content: center;">
+                    <input class="input_style" placeholder="Geburstdatum" id="" type="date">
+                  </div>
+                  <img onclick="" class="eye-icon" src="img/Icon ionic-md-calendar.png" style="position: absolute;margin-left: 40%; margin-bottom: 100px; margin-top: -27px;" alt="">
+
+
+
+
+                  <div style="display: flex ;justify-content: start;margin-top: 2%;margin-left: 11%;" >
+                    
+                    <p style="position: relative;color: gray; font-size: 80%;"> 
+                      <input  type="checkbox" id="benefits-Rabattpartner" name="benefits-Rabattpartner" value="">
+                      Ja, ich möchte keine neuen corporate benefits-Rabattpartner und Mitarbeiterangebote
+                       verpassen und monatlich per E-Mail darüber informiert werden.</p>
+                  </div> 
+
+                  <div style="display: flex ;justify-content: start;margin-top: 0%;margin-left: 11%;" >
+                    
+                    <p style="position: relative;color: gray; font-size: 80%;"> 
+                      <input type="checkbox" id="Nutzungsbedingungen" name="Nutzungsbedingungen" value="">
+                      Ja, ich Akzeptiere die Nutzungsbedingungen und die Datenschutzbedingungen. *</p>
+                  </div> 
+
+    
+                  <div style="display: flex ;justify-content: center;">
+                      <button onclick="submitData()" class="loggin_weiter" style="border-radius: 5px;font-size: 13px;margin-top: 3%;">Weiter</button>
+                  </div>
+
+                <div style="display: flex ;justify-content: center;margin-top: 1%;margin-bottom: 1%;">
+                  <div class="bottom-form-second"></div>
+                  <div class="bottom-form" style="margin-left: 1%;"></div>
+              </div>
+                </form>  
+ <!-- till  here(form) -->
+
+
+
+
+
+
           </div>
           <!-- <div class="col-6">
             <h6  style="position: absolute;margin-left:10%;margin-top: 5%;">Willkommen zurück!</h6>
@@ -376,7 +479,8 @@ position: relative;
 
 
 
-          
+
+<!-- INFO Registreirung-info on the right -->
           <div class="col-6" class="Registreirung-info" style="background-color: #F7F7F7;display: none;">
              <h6  style="position: absolute;margin-left:10%;margin-top: 5%;font-size: 200%;">Willkommen zurück!</h6>
                 <div  style="position: absolute;margin-left:5%;margin-top: 10%;width: 50px;height: 50px;
@@ -398,9 +502,12 @@ position: relative;
                  </div>
           </div>
 
+<!-- till here (Registreirung-info) -->
 
 
 
+
+<!-- INFO secure code-info -->
           <div class="col-6" class="secure-code-info" style="background-color: #F7F7F7;display: none;">
             <h6  style="position: absolute;margin-left:10%;margin-top: 5%;font-size: 200%;">Willkommen zurück!</h6>
                <div  style="position: absolute;margin-left:5%;margin-top: 10%;width: 50px;height: 50px;
@@ -422,9 +529,10 @@ position: relative;
                       </div>
                 </div>
          </div> 
+<!-- till here (secure-code) -->
 
 
-         
+<!-- INFO password-info -->
          <div class="col-6" class="Password-info" style="background-color: #F7F7F7;">
           <h6  style="position: absolute;margin-left:10%;margin-top: 5%;font-size: 200%;">Willkommen zurück!</h6>
              <div  style="position: absolute;margin-left:5%;margin-top: 10%;width: 50px;height: 50px;
@@ -442,6 +550,7 @@ position: relative;
                     </div>
               </div>
        </div>
+<!-- till here (password) -->
 
 
 
@@ -553,7 +662,7 @@ position: relative;
     <div class="slideshow-container">
       <div style="text-align:center" class="mt-4">
         <button style="background-color:rgba(255, 255, 255, 0);border:2px solid #F6552B;
-        border-radius: 5px;color: #F6552B; width: 400px;margin: 40px;font-family: Verdana, Geneva, Tahoma, sans-serif;height: 50px;" >
+        border-radius: 5px;color: #F6552B; width: 30%px;margin: 40px;font-family: Verdana, Geneva, Tahoma, sans-serif;height: 50px;" >
         Entdecke jetzt alle andere produkt</button>
       </div>
    </div>
