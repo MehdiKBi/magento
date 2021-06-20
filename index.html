@@ -21,7 +21,7 @@
       }
 
       .btn_log {
-        background-color: #FF4A1A;
+        background-color: #FF5022;
         border-radius: 3px;
         border: none;
         width: 200px;
@@ -159,8 +159,6 @@
 }
 
 
-
-
 .animate {
   -webkit-animation: animatezoom 0.2s;
   animation: animatezoom 0.2s
@@ -186,7 +184,7 @@
 }
 .input_style_textarea{
   width: 80%;
-  height: 30%;
+  height: 20%;
   border-radius: 5px;
   border: 1px solid rgb(66, 136, 163);
   padding: 10px;
@@ -214,7 +212,7 @@
   
 }
 .einloggen_text:hover{
-  border-bottom: 2px solid #FF4A1A ;
+  border-bottom: 2px solid #FF5022 ;
   color: black;
   transform: scaleZ(1.1);
   font-weight: bold;
@@ -228,7 +226,7 @@
   transition: border-bottom .30s;
 }
 .Registrien:hover{
-  border-bottom: 2px solid #FF4A1A ;
+  border-bottom: 2px solid #FF5022 ;
   color: black;
 }
 
@@ -344,7 +342,7 @@ position: relative;
   </header>
 
 
-<!-- Register-completed -->
+<!-- Register-completed-FULLPAGE -->
 <!-- needs to be target from javascript (id) for now display none -->
   <div id="" class="Register-completed" style="display: none;">
     <div class="Register-completed-content animate" >
@@ -394,7 +392,7 @@ position: relative;
 
 
 
-            <!-- loggin form page  -->
+<!--(FORM) loggin form page  -->
                 
                 <form id="einlog" class="formBox" action="/action_page.php"  method="post" style="display: none;">
                 <div style="display: flex ;justify-content: start;margin-top: 6%;margin-left: 11%;" >
@@ -421,11 +419,11 @@ position: relative;
                </div>   
                 </form>
 
-<!-- till here loggin -->
+<!--(FORM) till here loggin -->
 
 
-<!-- bracht du hilfe form page  -->
-                 <form id="einlog" class="formBox" action="/action_page.php"  method="post">
+<!--(FORM) bracht du hilfe form page  -->
+                 <form id="einlog" class="formBox" action="/action_page.php"  method="post" style="display: none;">
                   <div style="margin-top: 12%; margin-left: 15%;" >
                    <h3 style="font-size: 150%;margin-top: 4%;color: #F6552B;">wie können wir dir helfen?</h3>
                    <p>Hier helfen wir dir am schnellsten weiter - finde Updates zu deinen Fragen sowie
@@ -455,12 +453,51 @@ position: relative;
                  </div>   
                   </form>
   
-<!-- till here( bracht du hilfe from page?) -->
+<!--(FORM) till here( bracht du hilfe from page?) -->
   
 
 
+<!--(FORM) Password vergessen? form  -->
+<form id="einlog" class="formBox" action="/action_page.php"  method="post">
+  <div style="display: flex;justify-content: center;margin-top: 20%;">
+    <img src="img/Password vergessen icon.png" alt="vergessen password" style="display: none;">
+    <img src="img/Password vergessen mailed.png" alt="vergessen password">
 
-<!-- first page of the regestration form  -->
+  </div>
+  <div style="margin-top: 17%; margin-left: 10%;" >
+   
+   <h3 style="font-size: 150%;margin-top: 4%; display: none;">Password vergessen?</h3>
+   <h3 style="font-size: 150%;margin-top: 4%;">Sie haben Post!</h3>
+
+   <p>Bitte gib deine Email-Adresse an um einen Link zum zurücksetzen deines Passworts zu erhalten.</p>
+
+   <p>Wenn Sie einen Account besitzen, der mit
+   <a href="#" style="color: #F6552B;">John.Leitner@corplife.at</a> 
+   at in Verbindung steht, werden Sie einen Link per Mail erhalten, um Ihr Passwort zurückzusetzen.</p>
+
+ </div>
+  <div style="display: flex ;justify-content: start;margin-top: 0%;margin-left: 11%;" >
+    <label for="email" style="display: none;">Ihre E-mail Adresse</label>
+  </div> 
+  <div style="display: flex ;justify-content: center;" >
+    <input class="input_style" placeholder="email" type="email" style="display: none;">
+  </div>
+  <div style="display: flex ;justify-content: center;">
+      <button onclick="submitData()" class="loggin_weiter" style="border-radius: 5px;font-size: 13px; display: none;">LINK SENDEN</button>
+      <button onclick="submitData()" class="loggin_weiter" style="border-radius: 5px;font-size: 13px;">Link Ernuet senden</button>
+
+  </div>
+
+<div style="display: flex ;justify-content: center;">
+      <a class style="text-decoration:underline;margin: 5px;" href="#">Zurück Zum Login</a>
+ </div>   
+  </form>
+<!--(FORM) till here(Password vergessen??) -->
+
+
+
+
+<!--(FORM) first page of the regestration form  -->
 
                 <form id="regis" class="regBox" action="/action_page.php"  method="post" style="display: none;">
                   <div style="display: flex ;justify-content: start;margin-top: 5%;margin-left: 11%;" >
@@ -507,12 +544,12 @@ position: relative;
                   <div class="bottom-form-second" style="margin-left: 1%;"></div>
               </div>
                 </form>  
-    <!-- till  here(form) -->
+<!--(FORM) till  here(form) -->
 
 
 
 
-<!-- second page of the regestration form 2  -->
+<!--(FORM) second page of the regestration form 2  -->
 
                 <form id="regis" class="secondPage-regForm" action="/action_page.php"  method="post" style="display: none;">
                   <div style="display: flex;justify-content: space-between;">
@@ -583,7 +620,7 @@ position: relative;
                   <div class="bottom-form" style="margin-left: 1%;"></div>
               </div>
                 </form>  
- <!-- till  here(form 2) -->
+ <!--(FORM) till  here(form 2) -->
 
 
 
@@ -591,12 +628,15 @@ position: relative;
 
 
           </div>
-          <!-- <div class="col-6">
+<!-- INFO Login-info on the right -->
+
+          <div class="col-6">
             <h6  style="position: absolute;margin-left:10%;margin-top: 5%;">Willkommen zurück!</h6>
             <div>
               <img style="width: 100%; height: 100%;" src="img/rightside_image_loggin.png" alt="loggin image">
             </div>
-          </div> -->
+          </div>
+<!-- INFO Login till here -->
 
 
 
@@ -622,8 +662,9 @@ position: relative;
                        </div>
                  </div>
           </div>
-
 <!-- till here (Registreirung-info) -->
+
+
 
 <!-- INFO Registreirung-info on the right part 2 -->
 <div class="col-6" class="Registreirung-info" style="background-color: #F7F7F7;display: none;">
@@ -656,7 +697,6 @@ position: relative;
         </div>
       </div>
 </div>
-
 <!-- till here (Registreirung-info 2) -->
 
 
@@ -710,8 +750,8 @@ position: relative;
 
 
 <!-- INFO bracht du hilfe?-info -->
-<div class="col-6" class="Password-info" style="background-color: #F7F7F7;">
-  <h6  style="position: absolute;margin-left:5%;margin-top: 5%;font-size: 150%; color: rgb(251, 64, 31);">Finde Antworten nach Themen</h6>
+<div class="col-6" class="Password-info" style="background-color: #F7F7F7;display: none;">
+  <h6  style="position: absolute;margin-left:5%;margin-top: 5%;font-size: 150%; color: rgb(251, 64, 31);font-weight: bold;">Finde Antworten nach Themen</h6>
      <div  style="position: absolute;margin-left:2%;margin-top: 2%;width: 50px;height: 50px;
           background-color: #ff745c5d; border-radius: 50%;
      ">
@@ -727,21 +767,25 @@ position: relative;
               <p>American <br> Express<br>  Diners Club <br> MasterCard <br>
                 PayPal <br> paysafecash <br> Sofortüberweisung<br>  Visa</p>
            
-                <p style="color: tomato; font-weight: 900;">Keine der Fragen oben trifft auf mich zu, wer kann mir helfen?</p>
+                <p style="color: tomato; font-weight: bold;">Keine der Fragen oben trifft auf mich zu, wer kann mir helfen?</p>
 
-                  <p>Bitte schicken eine E-Mail an <a href="" style="color: #F6552B;">service@corplife.at</a>   & erkläre uns 
+                  <p>Bitte schicken eine E-Mail an <a href="" style="color: #F6552B;font-weight: bold;">service@corplife.at</a>   & erkläre uns 
                     wie wir dich unterstützen können ode einfach schreiben sie ihre
                     nachricht.</p>
             </div>
         </div>
 <!-- till here (bracht du hilfe?) -->
+<div class="col-6" style="display: none;">
+  <h6  style="position: absolute;margin-left:10%;margin-top: 5%;">Willkommen zurück!</h6>
+  <div>
+    <img style="width: 100%; height: 100%;" src="img/rightside_image_loggin.png" alt="loggin image">
+  </div>
+</div>
+
+<!-- INFO forgot password ??? -->
 
 
-
-
-
-
-
+<!-- till here (INFO forgot password ???) -->
 
 
 
@@ -752,8 +796,6 @@ position: relative;
       </div>
   </div>
 </div>
-  
-
   <div class="nav-scroller py-1 mb-2 mt-2" style="background-color: white;">
     <nav class="nav d-flex text-dark justify-content-between" style="font-size: 10px;color: black;text-decoration:none;">
       <a class="p-2" href="#" style="margin-left: 200px;">KULINARIK</a>
@@ -1035,15 +1077,18 @@ position: relative;
     </div>
     <div class="col-6 col-md ">
         <img style="margin-right: 100px;" src="img/Group 10089.png" alt="app">
+        
     </div>
   </div>
+ 
+  </div> 
 </footer>
+
 <!-- <div class="row" style="background-color:#130F30;border-top: 0.20px solid rgba(255, 255, 255, 0.116);">
-  <p class="col-9" style="color:#5f5983;font-size: 15px;">Corplife GmbH 2021</p>
+  <p class="col-9 col-md" style="color:#5f5983;font-size: 15px;">Corplife GmbH 2021</p>
   <p class="col-1" style="color:#5f5983;font-size: 15px;">Datenschutz</p>
   <p class="col-1" style="color:#5f5983;font-size: 15px;">Impressum</p>
   <p class="col-1" style="color:#5f5983;font-size: 15px;">AGB</p>
-</div>
 </div> -->
 
 <!-- <div class="row" style="background-color:#130F30;border-top: 0.20px solid rgba(255, 255, 255, 0.116);">
