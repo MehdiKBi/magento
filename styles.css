@@ -12,6 +12,18 @@ div.container {padding: 0.3em;}
     margin-top: 2em;
 }
 
+.bottom-form{
+    width: 25px;
+    height: 8px;
+    border-radius: 10px;
+    background-color: black;
+}
+  .bottom-form-second{
+    width: 8px;
+    height: 8px;
+    border-radius: 10px;
+    background-color: gray;
+  }
 
 #otherproducts button {background-color:rgba(255, 255, 255, 0);border:2px solid #F6552B;border-radius: 5px;color: #F6552B;width: 30em;margin: 1em auto;font-family: Verdana, Geneva, Tahoma, sans-serif;height: 3em;
 text-transform: uppercase;
