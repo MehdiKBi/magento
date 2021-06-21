@@ -22,8 +22,8 @@ $(document).ready(function() {
         loop : true,
         items : 1,
         dots : false,
-        animateOut: 'fadeOutLeft',
-        animateIn: 'fadeIn'
+        animateOut: 'slideOutLeft',
+        animateIn: ''
     });
     $elem.on("translate.owl.carousel", callback);
     function callback(event) {
@@ -95,8 +95,8 @@ $(document).ready(function() {
         loop : true,
         items : 1,
         dots : false,
-        animateOut: 'fadeOutLeft',
-        animateIn: 'fadeIn'
+        animateOut: 'slideOutLeft',
+        animateIn: ''
     });
     $elem.on("translate.owl.carousel", callback);
     function callback(event) {

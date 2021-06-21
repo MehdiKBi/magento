@@ -41,7 +41,7 @@
             </div>
         </section>
         <section id="menu" class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white" style="font-size: small;">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -344,9 +344,9 @@
                                             <label for="exampleInputPassword1">Passwort</label>
                                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Passwort" style="font-size: 0.8em;">
                                           </div>
-                                          <button type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;font-weight: bold;font-size: .80em;">Weiter</button>
+                                          <button type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;font-weight: bold;font-size: .80em;margin-top: 5em;">Weiter</button>
                                         <div style="display: flex ;justify-content: center;margin-top: 0;">
-                                            <p>Haben sie keine konto?</p>&nbsp;<a style="color: #FF4A1A; cursor: pointer;" onclick="{$('#formLogin #register-tab').tab('show');}">hier klicken</a>
+                                            <p>Haben sie keine konto?</p>&nbsp;<a style="color: #ff4c1aa1; cursor: pointer; font-weight: bold" onclick="{$('#formLogin #register-tab').tab('show');}">hier klicken</a>
                                         </div>
                                         <div style="text-align: center;">
                                             <a class style="text-decoration: underline;color: #BBB; cursor: pointer;" onclick="switchFromLoginToResetPassword()">Password Vergessen?</a>
@@ -365,15 +365,15 @@
                                             <label for="exampleInputPassword3">Passwort Wiederholung</label>
                                             <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Passwort Wiederholung" style="font-size: 0.8em;">
                                           </div>
-                                          <button type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;font-weight:bold;font-size: .80em;">Weiter</button>
+                                          <button type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;font-weight:bold;font-size: .80em;margin-top: 5em;">Weiter</button>
                                         <div style="display: flex ;justify-content: center;margin-top: 0;">
-                                            <p>Hast du schon ein konto?</p>&nbsp;<a style="color: #FF4A1A; cursor: pointer;" onclick="{$('#formLogin #login-tab').tab('show');}">hier klicken</a>
+                                            <p>Hast du schon ein konto?</p>&nbsp;<a style="color: #ff4c1aa1; cursor: pointer;font-weight: bold" onclick="{$('#formLogin #login-tab').tab('show');}">hier klicken</a>
                                         </div>
                                     </div>
                                   </div>
                             </div>
                             <div class="col-lg-6">
-                                <p style="text-align: center; margin-top: 1em; font-weight: bold; font-family: 'Lora', serif; ">Willkommen zuruck!</p>
+                                <p style="text-align: center; margin-top: 1em; font-weight: bold; font-family: 'Lora', serif;font-size: 1em; ">Willkommen zuruck!</p>
                                 <img style="width: 100%;" src="img/login.png" />
                             </div>
                         </div>
@@ -394,14 +394,14 @@
                                     <div style="text-align: center; padding: 1em;">
                                         <img src="/img/password-vergessen.png" />
                                     </div>
-                                    <h4 style="font-weight: bold;">Passwort vergessen?</h4>
-                                    <h6 style="margin: 1em 0;">Bitte gib deine Email-Adresse an um einen Link zum zurücksetzen deines Passworts zu erhalten.
+                                    <h4 style="font-weight: bold;font-size: 1.5em;">Passwort vergessen?</h4>
+                                    <h6 style="margin: 1em 0;font-size: .95em;">Bitte gib deine Email-Adresse an um einen Link zum zurücksetzen deines Passworts zu erhalten.
                                     </h6>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ihre E-mail Adresse</label>
                                         <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email Adresse" style="font-size: 0.8em;">
                                       </div>
-                                      <button type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;font-weight:bold;font-size: .80em;"  onclick="resetPasswordRequest($('#formResetPassword #inputEmail').val())">LINK SENDEN</button>
+                                      <button type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;font-weight:bold;font-size: .80em;margin-top: 5em;"  onclick="resetPasswordRequest($('#formResetPassword #inputEmail').val())">LINK SENDEN</button>
                                     <div style="text-align: center;">
                                         <a class style="text-decoration: underline;color: #BBB; cursor: pointer;" onclick="switchFromResetPasswordToLogin()">Zuruck zum loggin</a>
                                     </div>
@@ -410,12 +410,12 @@
                                     <div style="text-align: center; padding: 1em;">
                                         <img src="/img/password-vergessen-mailed.png" />
                                     </div>
-                                    <h4>Sie haben Post!</h4>
-                                    <h6 style="margin: 1em 0;">Wenn Sie einen Account besitzen, der mit
+                                    <h4 style="font-weight: bold;margin-top: 2em;">Sie haben Post!</h4>
+                                    <h6 style="margin: 1em 0;font-size: 1em;">Wenn Sie einen Account besitzen, der mit
                                     </h6>
-                                    <h6 style="margin: 1em 0; color: #FF4A1A;" id="requestedResetEmail"></h6>
-                                    <h6 style="margin: 1em 0;">at in Verbindung steht, werden Sie einen Link per Mail erhalten, um Ihr Passwort zurückzusetzen.</h6>
-                                    <button type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;" onclick="toggleResetPasswordBoxes()">LINK ERNEUET SENDEN</button>
+                                    <h6 style="margin: 1em 0; color: #FF4A1A;font-size: 1em;font-weight: bold;" id="requestedResetEmail"></h6>
+                                    <h6 style="margin: 1em 0;font-size: 1em;">at in Verbindung steht, werden Sie einen Link per Mail erhalten, um Ihr Passwort zurückzusetzen.</h6>
+                                    <button type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;font-weight: bold;margin-top: 5em;font-size: .90em;" onclick="toggleResetPasswordBoxes()">LINK ERNEUET SENDEN</button>
                                     <div style="text-align: center;">
                                         <a class style="text-decoration: underline;color: #BBB; cursor: pointer;" onclick="{toggleResetPasswordBoxes();switchFromResetPasswordToLogin()}">Zuruck zum loggin</a>
                                     </div>

@@ -7,7 +7,13 @@ div.container {padding: 0.3em;}
 #menu nav.navbar ul.navbar-nav li a {color: #2B2929;transition: color 0.3s;transition-delay: 0.3s;}
 #menu nav.navbar ul.navbar-nav li a:hover {color: #FF5022 !important;transition: color 0.3s;}
 #waterfal img:first-child {margin-top: 0.3em;width: 100%;}
-#otherproducts button {background-color:rgba(255, 255, 255, 0);border:2px solid #F6552B;border-radius: 5px;color: #F6552B;width: 30em;margin: 1em auto;font-family: Verdana, Geneva, Tahoma, sans-serif;height: 3em;}
+
+
+#otherproducts button {background-color:rgba(255, 255, 255, 0);border:2px solid #F6552B;border-radius: 5px;color: #F6552B;width: 30em;margin: 1em auto;font-family: Verdana, Geneva, Tahoma, sans-serif;height: 3em;
+text-transform: uppercase;
+}
+
+
 @media only screen and (max-width: 570px) {
     #otherproducts button {
         width: 100%;
@@ -23,9 +29,10 @@ div.container {padding: 0.3em;}
 #forms .nav-link.active {background-color: white !important;color: #000;font-weight: bold;border-bottom: 1px solid #F6552B;border-radius: 0;}
 div.loadingDiv {position: absolute;width: 100%;height: 100%;display: flex;top: 0;background-color: rgba(0,0,0,0.8);z-index: 1100;align-items: center;}
 div.loadingDiv div.spinner-border {margin: auto;align-self: center;z-index: 1101;}
-.owl-carousel .item h2{font-weight: bold;}
+.owl-carousel .item h2{font-weight: bold;font-size: 1.2em;}
 
-
+.tab-content>.active {display: block; padding: 1em;margin-top: 0.5em;}
+.tab-content{margin-top:5em;}
 
 
 #mini-sweeper, #mini-sweeper-1 { overflow: hidden; }
