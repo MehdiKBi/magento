@@ -6,7 +6,12 @@
         <meta name="description" content="" />
         <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
         <meta name="generator" content="Hugo 0.80.0" />
-
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet"/>    
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
         <link href="styles.css" rel="stylesheet" />
@@ -320,7 +325,7 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-lg-6" style="margin-top: 1em;">
+                            <div class="col-lg-6" style="margin-top: 1em;font-size: .70em;">
                                 <ul class="nav nav-pills nav-justified" id="logintab" role="tablist">
                                     <li class="nav-item" role="presentation">
                                       <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="home" aria-selected="true">Einloggen</button>
@@ -333,13 +338,13 @@
                                     <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab" style="margin: 4em 2em;">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Email Adresse</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Adresse">
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Adresse" style="font-size: 0.8em;">
                                           </div>
                                           <div class="form-group" style="margin-top: 1em;">
                                             <label for="exampleInputPassword1">Passwort</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Passwort">
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Passwort" style="font-size: 0.8em;">
                                           </div>
-                                          <button type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;">Weiter</button>
+                                          <button type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;font-weight: bold;font-size: .80em;">Weiter</button>
                                         <div style="display: flex ;justify-content: center;margin-top: 0;">
                                             <p>Haben sie keine konto?</p>&nbsp;<a style="color: #FF4A1A; cursor: pointer;" onclick="{$('#formLogin #register-tab').tab('show');}">hier klicken</a>
                                         </div>
@@ -350,25 +355,25 @@
                                     <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab" style="margin: 2.5em 2em;">
                                         <div class="form-group">
                                             <label for="exampleInputEmail2">Email Adresse</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Email Adresse">
+                                            <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Email Adresse" style="font-size: 0.8em;">
                                           </div>
                                           <div class="form-group" style="margin-top: 1em;">
                                             <label for="exampleInputPassword2">Passwort</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Passwort">
+                                            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Passwort" style="font-size: 0.8em;">
                                           </div>
                                           <div class="form-group" style="margin-top: 1em;">
                                             <label for="exampleInputPassword3">Passwort Wiederholung</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Passwort Wiederholung">
+                                            <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Passwort Wiederholung" style="font-size: 0.8em;">
                                           </div>
-                                          <button type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;">Weiter</button>
+                                          <button type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;font-weight:bold;font-size: .80em;">Weiter</button>
                                         <div style="display: flex ;justify-content: center;margin-top: 0;">
-                                            <p>Hast du schon ein konto</p>&nbsp;<a style="color: #FF4A1A; cursor: pointer;" onclick="{$('#formLogin #login-tab').tab('show');}">hier klicken</a>
+                                            <p>Hast du schon ein konto?</p>&nbsp;<a style="color: #FF4A1A; cursor: pointer;" onclick="{$('#formLogin #login-tab').tab('show');}">hier klicken</a>
                                         </div>
                                     </div>
                                   </div>
                             </div>
                             <div class="col-lg-6">
-                                <p style="text-align: center; margin-top: 1em; font-weight: bold;">Willkommen zuruck!</p>
+                                <p style="text-align: center; margin-top: 1em; font-weight: bold; font-family: 'Lora', serif; ">Willkommen zuruck!</p>
                                 <img style="width: 100%;" src="img/login.png" />
                             </div>
                         </div>
@@ -384,18 +389,19 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-lg-6" style="margin-top: 1em;">
+                            <div class="col-lg-6" style="margin-top: 3em;font-size: .70em;">
                                 <div style="margin: 2em;" id="passwordResetBox">
                                     <div style="text-align: center; padding: 1em;">
                                         <img src="/img/password-vergessen.png" />
                                     </div>
-                                    <h4>Passwort vergessen?</h4>
-                                    <h6 style="margin: 1em 0;">Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.</h6>
+                                    <h4 style="font-weight: bold;">Passwort vergessen?</h4>
+                                    <h6 style="margin: 1em 0;">Bitte gib deine Email-Adresse an um einen Link zum zurücksetzen deines Passworts zu erhalten.
+                                    </h6>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ihre E-mail Adresse</label>
-                                        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email Adresse">
+                                        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email Adresse" style="font-size: 0.8em;">
                                       </div>
-                                      <button type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;"  onclick="resetPasswordRequest($('#formResetPassword #inputEmail').val())">LINK SENDEN</button>
+                                      <button type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;font-weight:bold;font-size: .80em;"  onclick="resetPasswordRequest($('#formResetPassword #inputEmail').val())">LINK SENDEN</button>
                                     <div style="text-align: center;">
                                         <a class style="text-decoration: underline;color: #BBB; cursor: pointer;" onclick="switchFromResetPasswordToLogin()">Zuruck zum loggin</a>
                                     </div>
@@ -416,7 +422,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <p style="text-align: center; margin-top: 1em; font-weight: bold;">Willkommen zuruck!</p>
+                                <p style="text-align: center; margin-top: 1em; font-weight: bold;font-family: 'Lora', serif;">Willkommen zuruck!</p>
                                 <img style="width: 100%;" src="img/login.png" />
                             </div>
                         </div>
