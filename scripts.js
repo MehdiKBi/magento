@@ -172,3 +172,4 @@ const toggleResetPasswordBoxes = () => {
     $('#formResetPassword #passwordResetMailedBox').hide('fast');
     $('#formResetPassword #passwordResetBox').show('fast');
 };
+

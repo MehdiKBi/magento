@@ -8,11 +8,16 @@ div.container {padding: 0.3em;}
 #menu nav.navbar ul.navbar-nav li a:hover {color: #FF5022 !important;transition: color 0.3s;}
 #waterfal img:first-child {margin-top: 0.3em;width: 100%;}
 
+.owl-carousel p {
+    margin-top: 2em;
+}
+
 
 #otherproducts button {background-color:rgba(255, 255, 255, 0);border:2px solid #F6552B;border-radius: 5px;color: #F6552B;width: 30em;margin: 1em auto;font-family: Verdana, Geneva, Tahoma, sans-serif;height: 3em;
 text-transform: uppercase;
 }
 
+#logintabContent{margin-top: 8em;}
 
 @media only screen and (max-width: 570px) {
     #otherproducts button {
