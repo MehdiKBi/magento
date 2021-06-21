@@ -319,6 +319,7 @@
             </div>
         </section>
         <section id="forms">
+            
             <!--(FORM) login form page  -->
             <div class="modal fade" id="formLogin" tabindex="-1" aria-labelledby="formLoginLable" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
@@ -334,7 +335,8 @@
                                       <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="profile" aria-selected="false">Registrien</button>
                                     </li>
                                   </ul>
-                                  <div class="tab-content" id="logintabContent">
+                                 <div class="tab-content" id="logintabContent">
+
                                     <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab" style="margin: 4em 2em;">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Email Adresse</label>
@@ -352,7 +354,9 @@
                                             <a class style="text-decoration: underline;color: #BBB; cursor: pointer;" onclick="switchFromLoginToResetPassword()">Password Vergessen?</a>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab" style="margin: 2.5em 2em;">
+                                    
+
+                                    <div class="tab-pane show" id="register" role="tabpanel" aria-labelledby="register-tab" style="margin: 2.5em 2em;">
                                         <div class="form-group">
                                             <label for="exampleInputEmail2">Email Adresse</label>
                                             <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Email Adresse" style="font-size: 0.8em;">
@@ -365,13 +369,13 @@
                                             <label for="exampleInputPassword3">Passwort Wiederholung</label>
                                             <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Passwort Wiederholung" style="font-size: 0.8em;">
                                           </div>
-                                          <button type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;font-weight:bold;font-size: .80em;margin-top: 5em;">Weiter</button>
+                                          <button onclick="switchFormRegistrationtoSecondPart()" type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;font-weight:bold;font-size: .80em;margin-top: 5em;">Weiter</button>
                                         <div style="display: flex ;justify-content: center;margin-top: 0;">
                                             <p>Hast du schon ein konto?</p>&nbsp;<a style="color: #ff4c1aa1; cursor: pointer;font-weight: bold" onclick="{$('#formLogin #login-tab').tab('show');}">hier klicken</a>
                                         </div>
                                         <div style="display: flex ;justify-content: center;margin-top: 1%;margin-bottom: 1%;">
                                             <div class="bottom-form"></div>
-                                            <div class="bottom-form-second" style="margin-left: 1%;"></div>
+                                            <div class="bottom-form-second" style="cursor: pointer;"  style="margin-left: 1%;"></div>
                                         </div>
                                     </div>
                                   </div>
@@ -435,6 +439,210 @@
                 </div>
             </div>
             <!--(FORM) till here ResetPassword -->
+
+            <!-- Registration Part 2 -->
+            <div class="modal fade" id="registerSecondPage" tabindex="-1" aria-labelledby="formResetPasswordLable" aria-hidden="true" style="padding: 0%;">
+                <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body" style="padding: 0%;">
+                        <div class="row">
+                            <div class="col-lg-6" style="margin-top: 0em;font-size: .70em;">
+                                <ul class="nav nav-pills nav-justified" id="logintab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="home" aria-selected="true">Einloggen</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="profile" aria-selected="false">Registrien</button>
+                                    </li>
+                                  </ul>
+                                 <div class="tab-content" id="regSecondPage">
+
+
+                                    <div class="form-check" style="display: flex;justify-content: space-evenly;" >
+                                        <div>
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                Frau
+                                            </label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                            <label class="form-check-label" for="exampleRadios2">
+                                                Herr
+                                            </label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                                            <label class="form-check-label" for="exampleRadios3">
+                                                Andere
+                                            </label>
+                                          </div>
+                                        </div>
+                                     
+
+                                    <div class="tab-pane show fade active" id="login" role="tabpanel" aria-labelledby="login-tab" style="margin: 0em 2em;">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Vorname*</label>
+                                            <input type="text" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" placeholder="Vorname" style="font-size: 0.8em;">
+                                          </div>
+                                          <div class="form-group" style="margin-top: 1em;">
+                                            <label for="exampleInputPassword1">Nachname*</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1Three" placeholder="Nachname" style="font-size: 0.8em;">
+                                          </div>
+                                          <div class="form-group" style="margin-top: 1em;">
+                                            <label for="exampleInputEmail1">Gebustdatum</label>
+                                            <input type="date" class="form-control"  style="font-size: 0.8em;">
+                                          </div>
+                                          <div class="form-check" style="margin-top: 2em">
+                                            <input class="form-check-input" type="checkbox" value="">
+                                            <label class="form-check-label" style="color: #BBB;font-size: .70em;">
+                                                Ja, ich möchte keine neuen corporate benefits-Rabattpartner und Mitarbeiterangebote verpassen und monatlich per E-Mail darüber informiert werden.
+                                            </label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="">
+                                            <label class="form-check-label" style="color: #BBB;font-size: .70em;">
+                                                Ja, ich Akzeptiere die Nutzungsbedingungen und die Datenschutzbedingungen. *
+                                            </label>
+                                          </div>
+                                          <button type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;font-weight: bold;font-size: .80em;margin-top: 5em;">Weiter</button>
+                                          
+                                          <div style="display: flex ;justify-content: center;margin-top: 1%;margin-bottom: 1%;">
+                                            <div class="bottom-form-second" style="cursor: pointer;"  style="margin-left: 1%;"></div>
+                                            <div class="bottom-form"></div>
+                                        </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div style="display: flex;justify-content: center;">
+                                    <p style="margin-top: 1em; font-weight: bold; font-family: 'Lora', serif;font-size: 1em;position: absolute;">Willkommen zurück!</p>
+                                </div>
+                                <div class="textFormat" > 
+                                    <div style="position: absolute; font-size: .70em;margin-top:8em;padding: 2em;"> 
+                                        <h4>Registreirung</h4>
+                                        <h6 style="margin-top: 3em;">Datenschutz:</h6>
+                                        <p>Die angegebenen Daten werden ausschließlich zur Darstellung
+                                             der Seite und deren Funktionalitäten verwendet. Die Daten 
+                                             unterliegen den Datenschutzbestimmungen und sind für Dritte 
+                                             nicht zugänglich.</p>
+                                        <h6>Geburstdatum</h6>
+                                        <p>Die optionalen Felder Geburtsdatum  werden intern für die gezielte 
+                                            Suche nach neuen Anbietern und Angeboten sowie zur Optimierung von 
+                                            Suchergebnissen verwendet.</p> 
+
+                                            <div class="row mt-5" style="font-size: .70em;" >
+                                                <div class="col-6">
+                                                    <p style="cursor: pointer;" onclick="backToFirstPartofRegister()"  ><img src="img/arrow_back_black_24dp.png" alt="">zurück zum ersten Schritt</p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <p style="margin-left: 8em; cursor: pointer;" onclick="sendTheUserToHelpPage()"><img src="img/Icon question.png" alt=""> Braucht du hilfe?</p>
+                                                </div>
+                                            </div>
+                                    </div>
+
+                                   
+                                       
+                                </div>
+                                <img style="width: 100%;" src="img/gray.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        <!-- till here -->
+
+
+//new  bracht du hilfe?
+<div class="modal fade" id="hilfePage" tabindex="-1" aria-labelledby="formResetPasswordLable" aria-hidden="true" style="padding: 0%;">
+    <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-body" style="padding: 0%;">
+            <div class="row">
+                <div class="col-lg-6" style="margin-top: 0em;font-size: .70em;">
+                    
+                     <div class="tab-content" id="regSecondPage">
+
+                       
+                         
+
+                        <div class="tab-pane show fade active" id="login" role="tabpanel" aria-labelledby="login-tab" style="margin: 0em 2em;">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1"></label>
+                                <input type="text" class="form-control" id="exampleInputEmail1One" aria-describedby="emailHelp" placeholder="Vorname" style="font-size: 0.8em;">
+                              </div>
+                              <div class="form-group" style="margin-top: 1em;">
+                                <label for="exampleInputPassword1">Nachname*</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1Two" placeholder="Nachname" style="font-size: 0.8em;">
+                              </div>
+                              <div class="form-group" style="margin-top: 1em;">
+                                <label for="">Gebustdatum</label>
+                                <input type="date" class="form-control"  style="font-size: 0.8em;">
+                              </div>
+                              <div class="form-check" style="margin-top: 2em">
+                                <input class="form-check-input" type="checkbox" value="">
+                                <label class="form-check-label" style="color: #BBB;font-size: .70em;">
+                                    Ja, ich möchte keine neuen corporate benefits-Rabattpartner und Mitarbeiterangebote verpassen und monatlich per E-Mail darüber informiert werden.
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="">
+                                <label class="form-check-label" style="color: #BBB;font-size: .70em;">
+                                    Ja, ich Akzeptiere die Nutzungsbedingungen und die Datenschutzbedingungen. *
+                                </label>
+                              </div>
+                              <button type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;font-weight: bold;font-size: .80em;margin-top: 5em;">Weiter</button>
+                              
+                              <div style="display: flex ;justify-content: center;margin-top: 1%;margin-bottom: 1%;">
+                                <div class="bottom-form-second" style="cursor: pointer;"  style="margin-left: 1%;"></div>
+                                <div class="bottom-form"></div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-6">
+                    <div style="display: flex;justify-content: center;">
+                        <p style="margin-top: 1em; font-weight: bold; font-family: 'Lora', serif;font-size: 1em;position: absolute;">Willkommen zurück!</p>
+                    </div>
+                    <div class="textFormat" > 
+                        <div style="position: absolute; font-size: .70em;margin-top:8em;padding: 2em;"> 
+                            <h4>Registreirung</h4>
+                            <h6 style="margin-top: 3em;">Datenschutz:</h6>
+                            <p>Die angegebenen Daten werden ausschließlich zur Darstellung
+                                 der Seite und deren Funktionalitäten verwendet. Die Daten 
+                                 unterliegen den Datenschutzbestimmungen und sind für Dritte 
+                                 nicht zugänglich.</p>
+                            <h6>Geburstdatum</h6>
+                            <p>Die optionalen Felder Geburtsdatum  werden intern für die gezielte 
+                                Suche nach neuen Anbietern und Angeboten sowie zur Optimierung von 
+                                Suchergebnissen verwendet.</p> 
+
+                                <div class="row mt-5" style="font-size: .70em;" >
+                                    <div class="col-6">
+                                    </div>
+                                    <div class="col-6">
+                                        <p style="margin-left: 8em;"><img src="img/Icon question.png" alt=""> Braucht du hilfe?</p>
+
+                                    </div>
+                                </div>
+                        </div>
+
+                       
+                           
+                    </div>
+                    <img style="width: 100%;" src="img/gray.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+  
+            </div>
 
             <div class="loadingDiv" id="loadingModal" style="display: none;">
                 <div class="spinner-border text-light" role="status"></div>

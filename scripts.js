@@ -138,6 +138,28 @@ const switchFromLoginToResetPassword = () => {
     $('#formResetPassword').modal('show');
 };
 
+const switchFormRegistrationtoSecondPart = () =>{
+    $('#formLogin').modal('hide');
+    $('#registerSecondPage').modal('show');
+};
+
+const backToFirstPartofRegister = () =>{
+    $("#registerSecondPage").hide('fast');
+    $('#formLogin').modal('show');
+
+
+    console.log("back to home");
+}
+
+const sendTheUserToHelpPage = () =>{
+    $("#registerSecondPage").hide('fast');
+    $('#hilfePage').modal('show');
+
+    console.log("helping page"); 
+}
+
+
+
 const switchFromResetPasswordToLogin = () => {
     $('#formResetPassword').modal('hide');
     $('#formLogin').modal('show');
