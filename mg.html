@@ -446,18 +446,16 @@
                 <div class="modal-content">
                     <div class="modal-body" style="padding: 0%;">
                         <div class="row">
-                            <div class="col-lg-6" style="margin-top: 0em;font-size: .70em;">
+                            <div class="col-lg-6" style="margin-top: 2em;font-size: .70em;">
                                 <ul class="nav nav-pills nav-justified" id="logintab" role="tablist">
                                     <li class="nav-item" role="presentation">
-                                      <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="home" aria-selected="true">Einloggen</button>
+                                      <button class="nav-link" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="home" aria-selected="false">Einloggen</button>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                      <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="profile" aria-selected="false">Registrien</button>
+                                      <button class="nav-link active" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="profile" aria-selected="true">Registrien</button>
                                     </li>
                                   </ul>
-                                 <div class="tab-content" id="regSecondPage">
-
-
+                                 <div class="tab-content-reg-second" id="regSecondPage">
                                     <div class="form-check" style="display: flex;justify-content: space-evenly;" >
                                         <div>
                                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
@@ -505,7 +503,7 @@
                                                 Ja, ich Akzeptiere die Nutzungsbedingungen und die Datenschutzbedingungen. *
                                             </label>
                                           </div>
-                                          <button type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;font-weight: bold;font-size: .80em;margin-top: 5em;">Weiter</button>
+                                          <button onclick="toshowTheDoneFullPage()" type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;font-weight: bold;font-size: .80em;margin-top: 5em;">Weiter</button>
                                           
                                           <div style="display: flex ;justify-content: center;margin-top: 1%;margin-bottom: 1%;">
                                             <div class="bottom-form-second" style="cursor: pointer;"  style="margin-left: 1%;"></div>
@@ -540,9 +538,6 @@
                                                 </div>
                                             </div>
                                     </div>
-
-                                   
-                                       
                                 </div>
                                 <img style="width: 100%;" src="img/gray.png" />
                             </div>
@@ -553,8 +548,30 @@
             </div>
         <!-- till here -->
 
+        <!-- FullPage register Done -->
+        <div class="modal fade" id="formDone" tabindex="-1" aria-labelledby="formResetPasswordLable" aria-hidden="true" style="width: 100vw;height: 100vh;">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body" style="padding: 0em; background-color:#F7F7F7;">
+                    <div class="row">
+                        <div class="col-12-lg" style="display: flex; justify-content: center;">
+                            <div style="width: 50vw; height: 75vh; background-color: #F7F7F7;">
+                                <div style="display: flex; justify-content: center;">
+                                     <img src="img/login.png" alt="">
+                                 </div>
+                                         <div class="loader"></div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+       
+        <!-- till Here Done -->
 
-//new  bracht du hilfe?
+
+<!-- //new  bracht du hilfe? -->
 <div class="modal fade" id="hilfePage" tabindex="-1" aria-labelledby="formResetPasswordLable" aria-hidden="true" style="padding: 0%;">
     <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -569,16 +586,16 @@
 
                         <div class="tab-pane show fade active" id="login" role="tabpanel" aria-labelledby="login-tab" style="margin: 0em 2em;">
                             <div class="form-group">
-                                <label for="exampleInputEmail1"></label>
-                                <input type="text" class="form-control" id="exampleInputEmail1One" aria-describedby="emailHelp" placeholder="Vorname" style="font-size: 0.8em;">
+                                <label for="email">Email adaress</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1One" aria-describedby="emailHelp" placeholder="Email" style="font-size: 0.8em;">
                               </div>
                               <div class="form-group" style="margin-top: 1em;">
                                 <label for="exampleInputPassword1">Nachname*</label>
                                 <input type="password" class="form-control" id="exampleInputPassword1Two" placeholder="Nachname" style="font-size: 0.8em;">
                               </div>
                               <div class="form-group" style="margin-top: 1em;">
-                                <label for="">Gebustdatum</label>
-                                <input type="date" class="form-control"  style="font-size: 0.8em;">
+                                <label for="">Nachricht</label>
+                                <textarea type="date" class="form-control"  style="font-size: 0.8em;">
                               </div>
                               <div class="form-check" style="margin-top: 2em">
                                 <input class="form-check-input" type="checkbox" value="">
@@ -627,7 +644,7 @@
                                     </div>
                                 </div>
                         </div>
-
+<!-- till here Bracht du  hilfe -->
                        
                            
                     </div>

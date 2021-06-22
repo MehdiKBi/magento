@@ -133,10 +133,23 @@ $(document).ready(function() {
     });
 });
 
+
+
+
 const switchFromLoginToResetPassword = () => {
     $('#formLogin').modal('hide');
     $('#formResetPassword').modal('show');
 };
+
+const toshowTheDoneFullPage = () => {
+    $('#registerSecondPage').modal('hide');
+    $('#formDone').modal('show');
+
+    setTimeout(() => {
+    $('#formDone').modal('hide');
+    }, 4000);
+};
+
 
 const switchFormRegistrationtoSecondPart = () =>{
     $('#formLogin').modal('hide');
@@ -146,8 +159,6 @@ const switchFormRegistrationtoSecondPart = () =>{
 const backToFirstPartofRegister = () =>{
     $("#registerSecondPage").hide('fast');
     $('#formLogin').modal('show');
-
-
     console.log("back to home");
 }
 

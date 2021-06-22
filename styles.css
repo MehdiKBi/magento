@@ -7,6 +7,15 @@ div.container {padding: 0.3em;}
 #menu nav.navbar ul.navbar-nav li a {color: #2B2929;transition: color 0.3s;transition-delay: 0.3s;}
 #menu nav.navbar ul.navbar-nav li a:hover {color: #FF5022 !important;transition: color 0.3s;}
 #waterfal img:first-child {margin-top: 0.3em;width: 100%;}
+.tab-content-reg-second{margin-top: 2em}
+
+.loader{margin-top: 11em;width: 0vw;height: 5px;background-color:#FF4A1A;animation-name: loading;animation-duration: 3s;}
+  @keyframes loading{
+    from{width:0vw}
+    to{width:50vw}  
+  }
+
+
 
 .owl-carousel p {
     margin-top: 2em;
