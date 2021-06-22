@@ -1,7 +1,7 @@
-body{min-width: 350px;font-family: 'Montserrat', sans-serif;}   
+body{min-width: 350px;font-family: 'Montserrat', sans-serif;background-color: #F7F7F7;}   
 div.container {padding: 0.3em;}
 .mg-login-button {background-color: #FF5022;border-radius: 3px;border: none;width: 160px;color: white;float: right;margin-top: 2em;font-size: 0.8rem;line-height: 1.8rem;}
-#menu {border-top: 2px solid #F5F5F5;margin-top: 1em;}
+#menu {border-top: 0px solid #F5F5F5;margin-top: .1em;}
 #menu nav.navbar ul.navbar-nav {margin: auto;}
 #menu nav.navbar ul.navbar-nav li {padding: 0 0.5em;}
 #menu nav.navbar ul.navbar-nav li a {color: #2B2929;transition: color 0.3s;transition-delay: 0.3s;}
