@@ -176,6 +176,13 @@ const switchFromResetPasswordToLogin = () => {
     $('#formLogin').modal('show');
 };
 
+const switchFromHelpToLogin = () =>{
+    $('#hilfePage').modal('hide');
+    $('#formLogin').modal('show');
+
+}
+
+
 const resetPassword = async (email, callback) => {
     // Simulate reset password API
     new Promise(resolve => setTimeout(resolve, 2000)).then(()=>{

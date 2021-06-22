@@ -342,7 +342,7 @@
                                             <label for="exampleInputEmail1">Email Adresse</label>
                                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Adresse" style="font-size: 0.8em;">
                                           </div>
-                                          <div class="form-group" style="margin-top: 1em;">
+                                          <div class="form-group" style="margin-top: 3em;">
                                             <label for="exampleInputPassword1">Passwort</label>
                                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Passwort" style="font-size: 0.8em;">
                                           </div>
@@ -579,8 +579,14 @@
             <div class="row">
                 <div class="col-lg-6" style="margin-top: 0em;font-size: .70em;">
                     
-                     <div class="tab-content" id="regSecondPage">
+
                         <div class="tab-pane show fade active" id="login" role="tabpanel" aria-labelledby="login-tab" style="margin: 0em 2em;">
+                            <div>
+                                <h5 style="color: tomato;font-weight: bold;margin-top: 1em;">wie können wir dir helfen?</h5>
+                                <p>Hier helfen wir dir am schnellsten weiter - finde Updates zu deinen Fragen sowie Antworten zu allen Themen im rechts side.</p>
+                                <a href="" style="color: rgba(0, 0, 0, 0.76);"><p>Hast du eine bestimmte Frage?</p></a> 
+                                <p>Dann schreiben sie uns einfach Hier;</p>
+                            </div>
                             <div class="form-group">
                                 <label for="email">Email adaress</label>
                                 <input type="text" class="form-control" id="exampleInputEmail1One" aria-describedby="emailHelp" placeholder="Email" style="font-size: 0.8em;">
@@ -591,36 +597,39 @@
                               </div>
                               <button type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;font-weight: bold;font-size: .80em;margin-top: 5em;">SENDEN</button>
                               <div style="text-align: center;">
-                                <!-- <a class style="text-decoration: underline;color: #BBB; cursor: pointer;" onclick="{toggleResetPasswordBoxes();switchFromResetPasswordToLogin()}">Zuruck zum loggin</a> -->
+                            <a class style="text-decoration: underline;color: #BBB; cursor: pointer;" onclick="switchFromHelpToLogin()">Zuruck zum loggin</a> 
                             </div>
                         </div>
                       </div>
-                </div>
+
                 <div class="col-lg-6">
-                    <div style="display: flex;justify-content: center;">
-                        <p style="margin-top: 1em; font-weight: bold; font-family: 'Lora', serif;font-size: 1em;position: absolute;">Willkommen zurück!</p>
-                    </div>
                     <div class="textFormat" > 
-                        <div style="position: absolute; font-size: .70em;margin-top:8em;padding: 2em;"> 
-                            <h4>Registreirung</h4>
-                            <h6 style="margin-top: 3em;">Datenschutz:</h6>
-                            <p>Die angegebenen Daten werden ausschließlich zur Darstellung
-                                 der Seite und deren Funktionalitäten verwendet. Die Daten 
-                                 unterliegen den Datenschutzbestimmungen und sind für Dritte 
-                                 nicht zugänglich.</p>
-                            <h6>Geburstdatum</h6>
-                            <p>Die optionalen Felder Geburtsdatum  werden intern für die gezielte 
-                                Suche nach neuen Anbietern und Angeboten sowie zur Optimierung von 
-                                Suchergebnissen verwendet.</p> 
-
-                                <div class="row mt-5" style="font-size: .70em;" >
-                                    <div class="col-6">
-                                    </div>
-                                    <div class="col-6">
-                                        <p style="margin-left: 8em;"><img src="img/Icon question.png" alt=""> Braucht du hilfe?</p>
-
-                                    </div>
-                                </div>
+                        <div style="position: absolute; font-size: .70em;margin-top:0em;padding: 2em;"> 
+                            <h5 style="font-weight: bold;">Finde Antworten nach Themen</h5>
+                            <h6 style="margin-top: 1em;font-weight: 600;">Rückgaberecht</h6>
+                            <div style="font-size: .80em;">
+                                <a href="" style="color: rgba(0, 0, 0, 0.76);"><p style="margin-bottom: 0em;">Wiederrufs- und Rücktrittsrecht</p></a>
+                                <a href="" style="color: rgba(0, 0, 0, 0.76);"><p style="margin-bottom: 0em;">Ausschluss des Rücktrittsrechts</p></a>
+                                <a href="" style="color: rgba(0, 0, 0, 0.76);"><p style="margin-bottom: 0em;">Verlust des Rücktrittsrechts</p></a>
+                                <a href="" style="color: rgba(0, 0, 0, 0.76);"><p style="margin-bottom: 2em;">Widerrufsfolgen</p></a>
+                            </div>
+                           
+                            <h6  style="font-weight: bold;">Zahlungsoptionen</h6>
+                            <p>Folgende Zahlungsoptionen stehen dir zur Verfügung:</p>
+                            <div style="font-size: .80em;">
+                                <p style="margin-bottom: 0em;">American Express</p>
+                                <p style="margin-bottom: 0em;">Diners Club</p>
+                                <p style="margin-bottom: 0em;">MasterCard</p>
+                                <p style="margin-bottom: 0em;">PayPal</p>
+                                <p style="margin-bottom: 0em;">paysafecash</p>
+                                <p style="margin-bottom: 0em;">Sofortüberweisung</p>
+                                <p style="margin-bottom: 1em;">Visa</p>
+                            </div>
+                            
+                            <p style="font-weight: bold;color: #FF4A1A;font-size: .80em;">Keine der Fragen oben trifft auf mich zu, wer kann mir helfen?</p>
+                            <p>Bitte schicken eine E-Mail an <a href="" style="font-weight: 600;color: #FF4A1A;">service@corplife.at</a> & erkläre uns 
+                                wie wir dich unterstützen können ode einfach schreiben sie ihre
+                                nachricht.</p>
                         </div>
 <!-- till here Bracht du  hilfe -->
                        
