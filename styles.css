@@ -9,13 +9,14 @@ div.container {padding: 0.3em;}
 #waterfal img:first-child {margin-top: 0.3em;width: 100%;}
 .tab-content-reg-second{margin-top: 2em}
 
-.loader{margin-top: 11em;width: 0vw;height: 5px;background-color:#FF4A1A;animation-name: loading;animation-duration: 3s;}
+.loader{margin-top: 11em;width: 0vw;height: 5px;background-color:#FF5638;animation-name: loading;animation-duration: 3s;}
   @keyframes loading{
     from{width:0vw}
     to{width:50vw}  
   }
 
 
+  
 
 .owl-carousel p {
     margin-top: 2em;
@@ -34,7 +35,7 @@ div.container {padding: 0.3em;}
     background-color: gray;
   }
 
-#otherproducts button {background-color:rgba(255, 255, 255, 0);border:2px solid #F6552B;border-radius: 5px;color: #F6552B;width: 30em;margin: 1em auto;font-family: Verdana, Geneva, Tahoma, sans-serif;height: 3em;
+#otherproducts button {background-color:rgba(255, 255, 255, 0);border:2px solid #FF7A62 ;border-radius: 5px;color: #F6552B;width: 30em;margin: 1em auto;font-family: Verdana, Geneva, Tahoma, sans-serif;height: 3em;
 text-transform: uppercase;
 }
 
@@ -52,7 +53,21 @@ text-transform: uppercase;
 #footer footer {padding: 0.5em 1em;}
 #footer a {text-decoration: none;}
 #forms .nav-link {color: #CCC;font-size: 0.8em;}
-#forms .nav-link.active {background-color: white !important;color: #000;font-weight: bold;border-bottom: 1px solid #F6552B;border-radius: 0;}
+
+#forms .nav-link.active {background-color: white !important;
+  color: #000;font-weight: bold;
+  border-bottom: 2px solid #FF7A62;border-radius: 0;
+   animation-name: btnunderline;
+   animation-duration: .50s;
+   animation-direction: alternate;
+  }
+
+@keyframes btnunderline{from{width: 20%;} }
+.mt-4 {
+  margin-top: 1.5rem!important;
+}
+
+
 div.loadingDiv {position: absolute;width: 100%;height: 100%;display: flex;top: 0;background-color: rgba(0,0,0,0.8);z-index: 1100;align-items: center;}
 div.loadingDiv div.spinner-border {margin: auto;align-self: center;z-index: 1101;}
 .owl-carousel .item h2{font-weight: bold;font-size: 1.2em;}

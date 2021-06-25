@@ -377,6 +377,7 @@
                                   </div>
                             </div>
                             <div class="col-lg-6">
+                                <img onclick="closeAllTabs()" style="float: right;cursor: pointer;" src="img/Icon ionic-md-close.png" alt="">
                                 <p style="text-align: center; margin-top: 1em; font-weight: bold; font-family: 'Lora', serif;font-size: 1em; ">Willkommen zurück!</p>
                                 <img style="width: 100%;" src="img/login.png" />
                             </div>
@@ -426,6 +427,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
+                                <img onclick="closeAllTabs()" style="float: right;cursor: pointer;" src="img/Icon ionic-md-close.png" alt="">
                                 <p style="text-align: center; margin-top: 1em; font-weight: bold;font-family: 'Lora', serif;">Willkommen zurück!</p>
                                 <img style="width: 100%;" src="img/login.png" />
                             </div>
@@ -500,7 +502,6 @@
                                             </label>
                                           </div>
                                           <button onclick="toshowTheDoneFullPage()" type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;font-weight: bold;font-size: .80em;margin-top: 5em;">Weiter</button>
-                                          
                                           <div style="display: flex ;justify-content: center;margin-top: 1%;margin-bottom: 1%;">
                                             <div class="bottom-form-second" style="cursor: pointer;"  style="margin-left: 1%;"></div>
                                             <div class="bottom-form"></div>
@@ -509,6 +510,7 @@
                                   </div>
                             </div>
                             <div class="col-lg-6">
+
                                 <div style="display: flex;justify-content: center;">
                                     <p style="margin-top: 1em; font-weight: bold; font-family: 'Lora', serif;font-size: 1em;position: absolute;">Willkommen zurück!</p>
                                 </div>
@@ -576,10 +578,10 @@
                 <div class="col-lg-6" style="margin-top: 0em;font-size: .70em;">
                     
 
-                        <div class="tab-pane show fade active" id="login" role="tabpanel" aria-labelledby="login-tab" style="margin: 0em 2em;">
+                        <div class="tab-pane show fade active" id="login" role="tabpanel" aria-labelledby="login-tab" style="margin: 0em 2em;font-size: .92em;">
                             <div>
-                                <h5 style="color: tomato;font-weight: bold;margin-top: 1em;">wie können wir dir helfen?</h5>
-                                <p>Hier helfen wir dir am schnellsten weiter - finde Updates zu deinen Fragen sowie Antworten zu allen Themen im rechts side.</p>
+                                <h5 style="color: tomato;font-weight: bold;margin-top: 1em;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">wie können wir dir helfen?</h5>
+                                <p class="mt-4">Hier helfen wir dir am schnellsten weiter - finde Updates zu deinen Fragen sowie Antworten zu allen Themen im rechts side.</p>
                                 <a href="" style="color: rgba(0, 0, 0, 0.76);"><p>Hast du eine bestimmte Frage?</p></a> 
                                 <p>Dann schreiben sie uns einfach Hier;</p>
                             </div>
@@ -593,7 +595,7 @@
                               </div>
                               <button type="button" class="btn btn-dark" style="background-color: black; width: 100%; margin: 1em 0;font-weight: bold;font-size: .80em;margin-top: 5em;">SENDEN</button>
                               <div style="text-align: center;">
-                            <a class style="text-decoration: underline;color: #BBB; cursor: pointer;" onclick="switchFromHelpToLogin()">Zuruck zum loggin</a> 
+                            <a class style="text-decoration: underline;color: #BBB; cursor: pointer;font-size: .80em;" onclick="switchFromHelpToLogin()">Zuruck zum loggin</a> 
                             </div>
                         </div>
                       </div>
@@ -601,10 +603,10 @@
                 <div class="col-lg-6">
                     <div class="textFormat" > 
                         <div style="position: absolute; font-size: .70em;margin-top:0em;padding: 2em;"> 
-                            <h5 style="font-weight: bold;">Finde Antworten nach Themen</h5>
+                            <h5 style="font-weight: bold;color: tomato;">Finde Antworten nach Themen</h5>
                             <h6 style="margin-top: 1em;font-weight: 600;">Rückgaberecht</h6>
                             <div style="font-size: .80em;">
-                                <a href="" style="color: rgba(0, 0, 0, 0.76);"><p style="margin-bottom: 0em;">Wiederrufs- und Rücktrittsrecht</p></a>
+                                <a href="" style="color: rgba(0, 0, 0, 0.76);margin-top: 1.2em;"><p style="margin-bottom: 0em;">Wiederrufs- und Rücktrittsrecht</p></a>
                                 <a href="" style="color: rgba(0, 0, 0, 0.76);"><p style="margin-bottom: 0em;">Ausschluss des Rücktrittsrechts</p></a>
                                 <a href="" style="color: rgba(0, 0, 0, 0.76);"><p style="margin-bottom: 0em;">Verlust des Rücktrittsrechts</p></a>
                                 <a href="" style="color: rgba(0, 0, 0, 0.76);"><p style="margin-bottom: 2em;">Widerrufsfolgen</p></a>
@@ -622,7 +624,7 @@
                                 <p style="margin-bottom: 1em;">Visa</p>
                             </div>
                             
-                            <p style="font-weight: bold;color: #FF4A1A;font-size: .80em;">Keine der Fragen oben trifft auf mich zu, wer kann mir helfen?</p>
+                            <p style="font-weight: bold;color: #FF4A1A;font-size: .80em; margin-top: 1.4em;">Keine der Fragen oben trifft auf mich zu, wer kann mir helfen?</p>
                             <p>Bitte schicken eine E-Mail an <a href="" style="font-weight: 600;color: #FF4A1A;">service@corplife.at</a> & erkläre uns 
                                 wie wir dich unterstützen können ode einfach schreiben sie ihre
                                 nachricht.</p>
