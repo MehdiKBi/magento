@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet"/>    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    #owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+</style>
+<body>
+    <div id="owl-demo-top" class="owl-carousel owl-theme" dir="ltr">
+        <div class="item">
+            <div class="row">
+                <div class="col-sm-12 col-md-8 imagebox"><img src="img/imagetoslide1.png" alt=""></div>
+
+                <div class="col-sm-12 col-md-4 dscbox">
+                    <h2>Was wünschen sich Ihre MitarbeiterInnen?</h2>
+                    <p>Corplife Benefits bietet exklusive Rabatte im Bereich Freizeit, Sport, Reisen und mehr für ALLE MitarbeiterInnen in Ihrem Unternehmen.</p>
+                    <button class="mg-login-button" type="button">ZUM ANGEBOTEN</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="row">
+                <div class="col-sm-12 col-md-8 imagebox"><img src="img/imagetoslide2.png" alt=""></div>
+
+                <div class="col-sm-12 col-md-4 dscbox">
+                    <h2>Wir stärken die Beziehung zu Ihren MitarbeiterInnen</h2>
+                    <p>Mehr Netto vom Brutto - Mit den Benefits von Corplife stärken Sie ganz einfach, digital und nachhaltig die MitarbeiterInnen-Bindung in Ihrem Unternehmen und werden zum Helden/zur Heldin Ihrer KollegInnen.</p>
+                    <button class="mg-login-button" type="button">ZUM ANGEBOTEN</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="row">
+                <div class="col-sm-12 col-md-8 imagebox"><img src="img/imagetoslide3.png" alt=""></div>
+                <div class="col-sm-12 col-md-4 dscbox">
+                    <h2>Eine Plattform so 
+                        vielfältig wie Ihre
+                        MitarbeiterInnen</h2>
+                    <p>Corplife Benefits bietet eine breite Auswahl an lokalen Angeboten, exklusiven Zugängen zu bekannten Online-Shops und traumhaften Reisen. Die Plattform wird an Ihre CI angepasst und ist nur für Ihre MitarbeiterInnen zugänglich.</p>
+                    <button class="mg-login-button" type="button">ZUM ANGEBOTEN</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="row">
+                <div class="col-sm-12 col-md-8 imagebox"><img src="img/imagetoslide4.png" alt=""></div>
+
+                <div class="col-sm-12 col-md-4 dscbox">
+                    <h2>Mehr als 240 Unternehmen
+                        österreichweit
+                        vertrauen unseren 
+                        Produkten.</h2>
+                    <p>Entdecken die brande jetzt</p>
+                    <button class="mg-login-button" type="button">ZUM ANGEBOTEN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+
+
+$(document).ready(function() {
+ 
+ $("#owl-demo-top").owlCarousel({
+     navigation : true, // Show next and prev buttons
+     autoPlay : false,
+     goToFirst : true,
+     goToFirstSpeed : 1000,
+     items : 1, 
+     goToFirst:true,
+    loop:true,
+    margin:10,
+    autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true
+ });
+})
+</script>
+</html>
