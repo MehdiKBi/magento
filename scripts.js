@@ -1,3 +1,25 @@
+$(document).ready(function() {
+
+
+$("#owl-demo-top").owlCarousel({
+    navigation : true, // Show next and prev buttons
+    autoPlay : false,
+    goToFirst : true,
+    goToFirstSpeed : 2000,
+    items : 1, 
+    goToFirst:true,
+   loop:true,
+   margin:20,
+   autoplay:true,
+   autoplayTimeout:3000,
+   autoplayHoverPause:true,
+   smartSpeed:3000,
+});
+})
+
+
+
+
 
 $(document).ready(function() {
  
@@ -12,26 +34,13 @@ $(document).ready(function() {
        margin:10,
        autoplay:true,
        autoplayTimeout:3000,
-       autoplayHoverPause:true
+       autoplayHoverPause:true,
+       autoplayTimeout:3000,
+
     });
   })
 
-   $(document).ready(function() {
  
-    $("#owl-demo-top").owlCarousel({
-        navigation : true, // Show next and prev buttons
-        autoPlay : false,
-        goToFirst : true,
-        goToFirstSpeed : 1000,
-        items : 1, 
-        goToFirst:true,
-       loop:true,
-       margin:10,
-       autoplay:true,
-       autoplayTimeout:3000,
-       autoplayHoverPause:true
-    });
-   })
 
 
 
