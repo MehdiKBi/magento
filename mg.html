@@ -17,7 +17,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-        <link href="styles.css" rel="stylesheet" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
@@ -25,9 +24,39 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-        <script src="scripts.js"></script>
+        <title>magento</title>
+        <style>
+body{min-width: 350px;font-family: 'Montserrat', sans-serif;background-color: #F5F4F4;}    
+div.container {padding: 0.3em;}
+.mg-login-button {background-color: #FF6448;border-radius: 3px;border: none;width: 160px;color: white;float: right;margin-top: 2em;font-size: 0.8rem;line-height: 1.8rem;}
+#menu {border-top: 0px solid #F5F5F5;margin-top: .1em;}
+#menu nav.navbar ul.navbar-nav {margin: auto;}
+#menu nav.navbar ul.navbar-nav li {padding: 0 0.5em;}
+#menu nav.navbar ul.navbar-nav li a {color: #2B2929;transition: color 0.3s;transition-delay: 0.3s;font-family: 'Montserrat', sans-serif;font-weight: 500;margin: 0em 1.3em 0em 1.3em;}
+#menu nav.navbar ul.navbar-nav li a:hover {color: #FF5022 !important;transition: color 0.3s;}
+#waterfal img:first-child {margin-top: 0.3em;width: 100%;}
+.tab-content-reg-second{margin-top: 2em}
+.loader{margin-top: 11em;width: 0vw;height: 5px;background-color:#FF5638;animation-name: loading;animation-duration: 3s;}
+  @keyframes loading{from{width:0vw}to{width:50vw}}
+.owl-carousel p {margin-top: 2em;}
+.bottom-form{width: 25px;height: 8px;border-radius: 10px;background-color: black;}
+.bottom-form-second{width: 8px;height: 8px;border-radius: 10px;background-color: gray;}
+#otherproducts button {background-color:rgba(255, 255, 255, 0);border:2px solid #FF7A62 ;border-radius: 5px;color: #F6552B;width: 30em;margin: 1em auto;font-family: Verdana, Geneva, Tahoma, sans-serif;height: 3em;text-transform: uppercase;}
+#logintabContent{margin-top: 8em;}
+@media only screen and (max-width: 570px) {#otherproducts button {width: 100%;}div.mg-app-download-buttons {text-align: center !important; }}
+#footer {padding: 0;background-color: #130F30;font-size: 0.7em;}
+#footer footer {padding: 0.5em 1em;}
+#footer a {text-decoration: none;}
+#forms .nav-link {color: #CCC;font-size: 0.8em;}
+#forms .nav-link.active {background-color: white !important;color: #000;font-weight: bold;border-bottom: 2px solid #FF7A62;border-radius: 0;animation-name: btnunderline;animation-duration: .50s;animation-direction: alternate;}
+@keyframes btnunderline{from{width: 20%;} }.mt-4 {margin-top: 1.5rem!important;}
+div.loadingDiv {position: absolute;width: 100%;height: 100%;display: flex;top: 0;background-color: rgba(0,0,0,0.8);z-index: 1100;align-items: center;}
+div.loadingDiv div.spinner-border {margin: auto;align-self: center;z-index: 1101;}
+.owl-carousel .item h2{font-weight: bold;font-size: 1.2em;}
+.tab-content>.active {display: block; padding: 1em;margin-top: 0.5em;}
+.tab-content{margin-top:5em;}
+        </style>
 
-        <title>phtml</title>
 
     </head>
     <body>
@@ -650,6 +679,140 @@
         </section>
     </body>
 
+
+    <script>
+        $(document).ready(function() {
+
+
+$("#owl-demo-top").owlCarousel({
+    navigation : true, // Show next and prev buttons
+    autoPlay : false,
+    goToFirst : true,
+    goToFirstSpeed : 2000,
+    items : 1, 
+    goToFirst:true,
+   loop:true,
+   margin:20,
+   autoplay:true,
+   autoplayTimeout:3000,
+   autoplayHoverPause:true,
+   smartSpeed:3000,
+});
+})
+
+
+
+
+
+$(document).ready(function() {
+ 
+    $("#owl-demo").owlCarousel({
+        navigation : true, // Show next and prev buttons
+        autoPlay : false,
+        goToFirst : true,
+        goToFirstSpeed : 1000,
+        items : 1, 
+        goToFirst:true,
+       loop:true,
+       margin:10,
+       autoplay:true,
+       autoplayTimeout:3000,
+       autoplayHoverPause:true,
+       autoplayTimeout:3000,
+
+    });
+  })
+
+ 
+
+
+
+
+
+
+const switchFromLoginToResetPassword = () => {
+    $('#formLogin').modal('hide');
+    $('#formResetPassword').modal('show');
+};
+
+const toshowTheDoneFullPage = () => {
+    $('#registerSecondPage').modal('hide');
+    $('#formDone').modal('show');
+
+    setTimeout(() => {
+    $('#formDone').modal('hide');
+    }, 4000);
+};
+
+
+const switchFormRegistrationtoSecondPart = () =>{
+    $('#formLogin').modal('hide');
+    $('#registerSecondPage').modal('show');
+};
+
+const backToFirstPartofRegister = () =>{
+    $("#registerSecondPage").hide('fast');
+    $('#formLogin').modal('show');
+    console.log("back to home");
+}
+
+const sendTheUserToHelpPage = () =>{
+    $("#registerSecondPage").hide('fast');
+    $('#hilfePage').modal('show');
+
+    console.log("helping page"); 
+}
+
+
+
+const switchFromResetPasswordToLogin = () => {
+    $('#formResetPassword').modal('hide');
+    $('#formLogin').modal('show');
+};
+
+const switchFromHelpToLogin = () =>{
+    $('#hilfePage').modal('hide');
+    $('#formLogin').modal('show');
+
+}
+
+
+const resetPassword = async (email, callback) => {
+    // Simulate reset password API
+    new Promise(resolve => setTimeout(resolve, 2000)).then(()=>{
+        if(callback) callback(email, true);
+    });
+};
+
+const resetPasswordRequest = email => {
+    $('#loadingModal').show();
+    resetPassword(
+        email,
+        (email, success) => {
+            if(success){
+                // email was successfully sent
+                $('#formResetPassword #requestedResetEmail').text(email);
+                $('#formResetPassword #passwordResetBox').hide('fast');
+                $('#formResetPassword #passwordResetMailedBox').show('fast');
+            } else {
+                // :/
+            }
+            $('#loadingModal').hide();
+        }
+    );
+};
+
+const toggleResetPasswordBoxes = () => {
+    $('#formResetPassword #passwordResetMailedBox').hide('fast');
+    $('#formResetPassword #passwordResetBox').show('fast');
+};
+
+const closeAllTabs = () =>{
+    $('#formLogin').modal('hide');
+}
+
+
+    </script>
 
     
 
